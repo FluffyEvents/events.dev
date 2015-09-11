@@ -29,6 +29,11 @@ class HomeController extends BaseController {
 		} else Redirect::to('/');
 	}
 
+	public function showMakeEvent()
+	{
+		return View::make('dev.makeEvent');
+	}
+
 	public function doLogin()
 	{
 		$input = array('email' => Input::get('email'), 'password' => Input::get('password'));
@@ -44,6 +49,7 @@ class HomeController extends BaseController {
 			return Redirect::action('HomeController@showLogin')->withInput();
 		}
 	}
+
 
 	public function doLogout()
 	{

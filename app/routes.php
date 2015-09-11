@@ -13,6 +13,9 @@
 
 #Home
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@showWelcome']);
+#Make New Event
+Route::get('/makeEvent', 'HomeController@showMakeEvent');
+
 
 Route::resource('calendar_events', 'CalendarEventsController');
 

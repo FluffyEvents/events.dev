@@ -1,4 +1,48 @@
-# Laravel 4.2 Event Management Application
+#Laravel 4.2 Event Management Application
+
+#SPEC
+Event Planning Application
+
+You will be making an application that manages events and where these events will be taking place. The look of the application is totally up to you. Before starting your application please use the following packages for your app.
+
+You may work on your own or in a team of two.
+You may also decide to build this application as a single page app with angular.
+
+Packages:
+- Ways Generators
+- Esensi Model
+
+Models:
+- Users
+    - name
+    - email
+    - password
+
+- CalendarEvents
+    Start date time
+    End date time
+    Title
+    Description
+    Price
+    user_id
+    location_id
+
+- Locations
+    Title
+    Address
+    City
+    State
+    Zip
+
+Resource Controllers:
+- CalendarEventsController
+- LocationsController
+
+Bonus
+- Event image(s)
+- Add Longitude/Lattitude to Location
+- Show google map of event location
+- Add functionality for visitors to register for an event
 
 #TODO
 1. Users can create, edit, and manage their events.

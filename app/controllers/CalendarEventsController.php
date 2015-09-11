@@ -9,9 +9,9 @@ class CalendarEventsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$calendarevents = Calendarevent::all();
+		$events = CalendarEvent::all();
 
-		return View::make('calendarevents.index', compact('calendarevents'));
+		return View::make('calendarevents.index', compact('events'));
 	}
 
 	/**
@@ -21,7 +21,8 @@ class CalendarEventsController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('calendarevents.create');
+		$locations = Location::all();
+		return View::make('dev.create', compact('locations'));
 	}
 
 	/**
@@ -31,11 +32,11 @@ class CalendarEventsController extends \BaseController {
 	 */
 	public function store()
 	{
-		$validator = Validator::make($data = Input::all(), Calendarevent::$rules);
+		Input::
 
-		if ($validator->fails())
+		if (!$location->save())
 		{
-			return Redirect::back()->withErrors($validator)->withInput();
+			return Redirect::back()->withErrors()->withInput();
 		}
 
 		Calendarevent::create($data);
