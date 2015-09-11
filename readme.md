@@ -66,7 +66,7 @@ Bonus
 
 ## Official Documentation
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+Documentation for Laravel 4.2 can be found on the [http://laravel.com/docs/4.2](http://laravel.com/docs/4.2).
 
 ### License
 
