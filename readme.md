@@ -63,3 +63,11 @@ Bonus
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
+
+## Official Documentation
+
+Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+
+### License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
