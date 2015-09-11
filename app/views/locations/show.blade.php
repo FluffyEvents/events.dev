@@ -1,0 +1,1 @@
+/vagrant/sites/fluffyevents.dev/app/views/locations/show.blade.php

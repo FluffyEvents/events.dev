@@ -11,8 +11,14 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+#Home
+Route::get('/', ['as' => 'home', 'uses' => 'HomeController@showWelcome']);
 
+Route::resource('calendar_events', 'CalendarEventsController');
+
+Route::resource('locations', 'LocationsController');
+
+# Authentication
+Route::get('login', ['as' => 'login', 'uses' => 'HomeController@showLogin']);
+Route::post('login', ['as' => 'login', 'uses' => 'HomeController@doLogin']);
+Route::get('logout', ['as' => 'logout', 'uses' => 'HomeController@doLogout']);

@@ -25,4 +25,10 @@ class CalendarEvent extends Model {
 		return $this->belongsTo('User', 'user_id');
 	}
 
+	public function location()
+	{
+		return $this->belongsTo('Location');
+	}
+
+
 }

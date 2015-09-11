@@ -33,4 +33,8 @@ class User extends Model implements UserInterface, RemindableInterface {
 
 	protected $hashable = [ 'password' ];
 
+	public function calendarEvents()
+	{
+	    return $this->hasMany('CalendarEvent');
+	}
 }
