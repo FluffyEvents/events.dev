@@ -13,15 +13,16 @@
 
 #Home
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@showWelcome']);
-#Make New Event
-Route::get('/makeEvent', 'HomeController@showMakeEvent');
 
+#Manage Events Dashboard
+Route::get('/events/manage', 'CalendarEventsController@currentUserEvents');
 
-Route::resource('calendar_events', 'CalendarEventsController');
+#Events Resource
+Route::model('events', 'CalendarEvent');
+Route::resource('events', 'CalendarEventsController');
 
-Route::resource('locations', 'LocationsController');
 
 # Authentication
 Route::get('login', ['as' => 'login', 'uses' => 'HomeController@showLogin']);
-Route::post('login', ['as' => 'login', 'uses' => 'HomeController@doLogin']);
-Route::get('logout', ['as' => 'logout', 'uses' => 'HomeController@doLogout']);
+Route::post('login', ['as' => 'login', 'uses' => 'HomeController@submitLogin']);
+Route::get('logout', ['as' => 'logout', 'uses' => 'HomeController@submitLogout']);

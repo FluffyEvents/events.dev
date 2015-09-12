@@ -1,52 +1,60 @@
 #Laravel 4.2 Event Management Application
 
-#SPEC
-Event Planning Application
+#Application User Profiling
+Users may need to address any or all of the following tasks related to an event:
+- Conduct event research (Wolfram Alpha)
+- Organize food, decorations and entertainment for an event
+- Plan transportation to and from the event location/locations
+- Send invitations to target audience/Manage event marketing campaign
+- Arranging any necessary accommodations for attendees/registrants
+- Coordinating the activities of event personnel
+- Evaluating event statistics before, during and after an event's life cycle
 
-You will be making an application that manages events and where these events will be taking place. The look of the application is totally up to you. Before starting your application please use the following packages for your app.
+#Basic Spec
+Event Planning Application : A Laravel application that manages user created events.
 
-You may work on your own or in a team of two.
-You may also decide to build this application as a single page app with angular.
+Spec Layout:
+- The look of the application is totally up to you.
 
+Spec Packages:
 Packages:
 - Ways Generators
 - Esensi Model
 
-Models:
+
+Spec Models:
 - Users
-    - name
+    - first_name
+    - last_name
     - email
     - password
 
 - CalendarEvents
-    Start date time
-    End date time
-    Title
-    Description
-    Price
-    user_id
-    location_id
+    - starts_at
+    - ends_at
+    - title
+    - description
+    - price
+    - user_id
+    - location_id
 
 - Locations
-    Title
-    Address
-    City
-    State
-    Zip
+    - name
+    - address
+    - city
+    - state
+    - postal_code
 
-Resource Controllers:
+Spec Resource Controllers:
 - CalendarEventsController
-- LocationsController
 
-Bonus
+
+# Over-Achiever's TODO
+Bonus:
 - Event image(s)
 - Add Longitude/Lattitude to Location
 - Show google map of event location
 - Add functionality for visitors to register for an event
-
-#TODO
-1. Users can create, edit, and manage their events.
-2. Event Management Dashboard: List All User Events By Auth::id() - For Each Event => Show:Invite:Edit:Delete
 
 
 ## Installation

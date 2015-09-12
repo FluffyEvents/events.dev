@@ -18,14 +18,14 @@ class CreateCalendarEventsTable extends Migration {
 			$table->integer('user_id')->unsigned();
 			$table->integer('location_id')->unsigned();
 			$table->string('title', 255);
-			$table->string('description', 255);
+			$table->string('description', 4000);
 			$table->decimal('price', 10, 2)->nullable();
 			$table->boolean('show_google_map')->default(false);
 			$table->timestamp('starts_at');
 			$table->timestamp('ends_at');
 			$table->softDeletes();
 			$table->timestamps();
-			
+
 			$table->foreign('location_id')->references('id')->on('locations');
    			$table->foreign('user_id')->references('id')->on('users');
 		});

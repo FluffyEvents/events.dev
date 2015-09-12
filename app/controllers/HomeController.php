@@ -29,29 +29,25 @@ class HomeController extends BaseController {
 		} else Redirect::to('/');
 	}
 
-	public function showMakeEvent()
-	{
-		return View::make('dev.makeEvent');
-	}
 
-	public function doLogin()
+	public function submitLogin()
 	{
-		$input = array('email' => Input::get('email'), 'password' => Input::get('password'));
-		if (Auth::attempt($input)) {
-		    return Redirect::intended('/');
-		} else {
+		$input = Input::only('email', 'password');
+
+		if (!Auth::attempt($input)) {
 			//1. display a session flash error
-			Session::flash('errorMessage', 'Invalid credentials provided for login.');
+			Session::flash('loginError', 'Invalid Email or Password.');
 			//2. Log email that tried to authenticate
 			$email = Input::get('email');
 			Log::error("Unable to authenticate $email login attempt.");
 			//3. redirect to login page with input
-			return Redirect::action('HomeController@showLogin')->withInput();
+			return Redirect::action('HomeController@showLogin')->withInput(Input::except('password'));
 		}
+		    return Redirect::intended('/');
 	}
 
 
-	public function doLogout()
+	public function submitLogout()
 	{
 
 		Auth::logout();

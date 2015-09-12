@@ -11,7 +11,17 @@ class CalendarEventsController extends \BaseController {
 	{
 		$events = CalendarEvent::all();
 
-		return View::make('calendarevents.index', compact('events'));
+		return View::make('hello', compact('events'));
+	}
+
+	/**
+	 * Show the Events Dashboard for the User
+	 *
+	 * @return Response
+	 */
+	public function currentUserEvents()
+	{
+		return Response::json(CalendarEvent::with('user', 'location')->where('user_id', Auth::id())->get());
 	}
 
 	/**
@@ -21,66 +31,81 @@ class CalendarEventsController extends \BaseController {
 	 */
 	public function create()
 	{
-		$locations = Location::all();
-		return View::make('dev.create', compact('locations'));
+		return View::make('dev.makeEvent');
 	}
 
+
 	/**
-	 * Store a newly created calendarevent in storage.
-	 *
+	 * This function will grab input data for both the Location and CalendarEvent models
+	 * and store the newly created Location and CalendarEvent
 	 * @return Response
 	 */
 	public function store()
 	{
-		Input::
+		// Grab the Input data for the Location
+		$input = Input::only('name', 'address', 'city', 'state', 'postal_code');
 
-		if (!$location->save())
-		{
-			return Redirect::back()->withErrors()->withInput();
-		}
+		$location = Location::create($input);
 
-		Calendarevent::create($data);
+		// Redirect Back With Ensensi Errors on Creation Failure
+		if (!$location) return Redirect::back()->withErrors($location->getErrors())->withInput();
 
-		return Redirect::route('calendarevents.index');
+		// Grab the Input data for the CalendarEvent
+		$input = Input::only('starts_at', 'ends_at', 'title', 'description', 'price');
+
+		// add user_id to $input as $data array
+		$data = array_add($input, 'user_id', Auth::id());
+
+		// add location_id to $data array
+		$data = array_add($data, 'location_id', $location->id);
+
+		$calendarEvent = CalendarEvent::create($data);
+
+		// On Failure Redirect Back With Ensensi Errors and the Created Location
+		// TODO Redirect with $location so multiple locations do not get added to DB on calendarEvent creation failure
+		if (!$calendarEvent) return Redirect::back()->withErrors($calendarEvent->getErrors())->withInput();
+
+		// On Successful Creation Show The Event Page
+		return Redirect::action('CalendarEventsController@show', $calendarEvent->id);
 	}
 
 	/**
-	 * Display the specified calendarevent.
+	 * Display the specified CalendarEvent.
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show(CalendarEvent $calendarEvent)
 	{
-		$calendarevent = Calendarevent::findOrFail($id);
+		// $calendarEvent = CalendarEvent::findOrFail($id);
 
-		return View::make('calendarevents.show', compact('calendarevent'));
+		return View::make('calendarevents.show', compact('calendarEvent'));
 	}
 
 	/**
-	 * Show the form for editing the specified calendarevent.
+	 * Show the form for editing the specified CalendarEvent.
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
 	public function edit($id)
 	{
-		$calendarevent = Calendarevent::find($id);
+		$calendarevent = CalendarEvent::find($id);
 
-		return View::make('calendarevents.edit', compact('calendarevent'));
+		return View::make('calendarevents.edit', compact('calendarEvent'));
 	}
 
 	/**
-	 * Update the specified calendarevent in storage.
+	 * Update the specified CalendarEvent in storage.
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
 	public function update($id)
 	{
-		$calendarevent = Calendarevent::findOrFail($id);
+		$calendarevent = CalendarEvent::findOrFail($id);
 
-		$validator = Validator::make($data = Input::all(), Calendarevent::$rules);
+		$validator = Validator::make($data = Input::all(), CalendarEvent::$rules);
 
 		if ($validator->fails())
 		{
@@ -93,14 +118,14 @@ class CalendarEventsController extends \BaseController {
 	}
 
 	/**
-	 * Remove the specified calendarevent from storage.
+	 * Remove the specified CalendarEvent from storage.
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
 	public function destroy($id)
 	{
-		Calendarevent::destroy($id);
+		CalendarEvent::destroy($id);
 
 		return Redirect::route('calendarevents.index');
 	}
