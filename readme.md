@@ -1,16 +1,8 @@
 #Laravel 4.2 Event Management Application
 
-#Application User Profiling
-Users may need to address any or all of the following tasks related to an event:
-- Conduct event research (Wolfram Alpha)
-- Organize food, decorations and entertainment for an event
-- Plan transportation to and from the event location/locations
-- Send invitations to target audience/Manage event marketing campaign
-- Arranging any necessary accommodations for attendees/registrants
-- Coordinating the activities of event personnel
-- Evaluating event statistics before, during and after an event's life cycle
 
-#Basic Spec
+
+#Basic Spec/Description
 Event Planning Application : A Laravel application that manages user created events.
 
 Spec Layout:
@@ -55,6 +47,17 @@ Bonus:
 - Add Longitude/Lattitude to Location
 - Show google map of event location
 - Add functionality for visitors to register for an event
+
+
+#Application User Profiling
+Users may need to address any or all of the following tasks related to an event:
+- Conduct event research (Wolfram Alpha)
+- Organize food, decorations and entertainment for an event
+- Plan transportation to and from the event location/locations
+- Send invitations to target audience/Manage event marketing campaign
+- Arranging any necessary accommodations for attendees/registrants
+- Coordinating the activities of event personnel
+- Evaluating event statistics before, during and after an event's life cycle
 
 
 ## Installation
