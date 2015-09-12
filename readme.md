@@ -50,7 +50,7 @@ Bonus:
 
 
 #Application User Profiling
-Users may need to address any or all of the following tasks related to an event:
+Users may need to address any or all of the following tasks related to an event outside the current application scope:
 - Conduct event research (Wolfram Alpha)
 - Organize food, decorations and entertainment for an event
 - Plan transportation to and from the event location/locations
