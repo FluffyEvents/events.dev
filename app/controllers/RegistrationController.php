@@ -2,7 +2,7 @@
 
 use Acme\Forms\RegistrationForm;
 
-class RegistrationController extends BaseController {
+class RegistrationController extends \BaseController {
 
 	/**
 	 * @var RegistrationForm

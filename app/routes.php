@@ -26,3 +26,4 @@ Route::resource('events', 'CalendarEventsController');
 Route::get('login', ['as' => 'login', 'uses' => 'HomeController@showLogin']);
 Route::post('login', ['as' => 'login', 'uses' => 'HomeController@submitLogin']);
 Route::get('logout', ['as' => 'logout', 'uses' => 'HomeController@submitLogout']);
+Route::post('/register', ['as' => 'registration.store', 'uses' => 'RegistrationController@store']);

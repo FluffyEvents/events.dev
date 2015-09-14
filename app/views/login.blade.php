@@ -64,7 +64,7 @@
                                                 'data-original-title' => 'Password is required')) }}
                                         </div>
                                     </div>
-                                    
+                                      
                                     <div class="col-md-12 overflowed">
                                         <div class="text-center margin-top">
                                             <button class="btn btn-theme btn-theme-xl submit-button" type="submit"> Submit <i class="fa fa-arrow-circle-right"></i></button>
@@ -85,7 +85,7 @@
                             </h1>
 
                             {{ Form::open(array('action' => 'RegistrationController@store', 'method' => 'POST', 'class' => 'registration-form registration-form-alt')) }}
-                            
+
                                 <div class="row">
                                     <div class="col-sm-12 form-alert"></div>
                                     <div class="col-sm-6">
