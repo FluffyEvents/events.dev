@@ -53,10 +53,9 @@
                 <div class="top-line">
                     <div class="container">
                         <ul class="user-menu">
-                            <li><a href="#popup-login" data-toggle="modal"><i class="fa fa-file-text-o"></i> Register Now</a></li>
-                            <li><a href="#popup-login" data-toggle="modal"><i class="fa fa-user"></i> Login</a></li>
+                            <li><a href="{{ action('HomeController@showLogin')}}"><i class="fa fa-user"></i> Login / Register Here</a></li>
                         </ul>
-                        <div class="hot-line"><span><i class="fa fa-calendar"></i> <strong>Latest Event:</strong></span>  Standart Event Name Here  "15 October at 20:00 - 22:00 on Manhattan / New York"</div>
+                        {{-- <div class="hot-line"><span><i class="fa fa-calendar"></i> <strong>Latest Event:</strong></span>  Standart Event Name Here  "15 October at 20:00 - 22:00 on Manhattan / New York"</div> --}}
                     </div>
                 </div>
                 <!-- /Top Line -->
@@ -81,12 +80,8 @@
                         <nav class="navigation closed clearfix">
                             <a href="#" class="menu-toggle btn"><i class="fa fa-bars"></i></a>
                             <ul class="sf-menu nav sf-js-enabled sf-arrows">
-                                <li class="active">
-                                    <a href="index.html" class="sf-with-ul">Home</a>
-                                    <ul style="display: none;">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="index-2.html">Home 2</a></li>
-                                    </ul>
+                                <li class="">
+                                    <a href="{{ action('HomeController@showWelcome')}}" class="sf-with-ul">Home</a>
                                 </li>
                                 <li class="">
                                     <a href="event-list.html" class="sf-with-ul">Events</a>
@@ -175,26 +170,32 @@
                             <span class="title-inner">Login</span>
                         </h1>
                     </div>
-                    <form method="post" action="#" class="registration-form alt" name="registration-form-alt" id="registration-form-alt">
+                    {{ Form::open(array('action' => 'HomeController@submitLogin', 'method' => 'POST', 'class' => 'registration-form alt')) }}
                         <div class="row">
                             <div class="col-sm-12 form-alert"></div>
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" title="" data-toggle="tooltip" class="form-control input-name" data-original-title="Name is required">
+                                    
+                                    <input data-toggle="tooltip" class="form-control input-name" data-original-title="Name is required" id="email" name="email" type="email" value="{{{ Input::old('email') }}}">
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" title="" data-toggle="tooltip" class="form-control input-password" data-original-title="Password">
+                                    
+                                    <input data-toggle="tooltip" class="form-control input-password" data-original-title="Password" id="password" name="password" type="password" value="">
                                 </div>
                             </div>                                  
                             <div class="col-sm-12">
                                 <div class="text-center">
+                                    @if(Session::has('loginError'))
+                                        <br><div class="alert alert-danger">{{{ Session::get('loginError') }}}</div>
+                                    @endif
                                     <button type="submit" class="btn btn-theme btn-block submit-button animated flipInY visible" data-animation-delay="100" data-animation="flipInY"> Log in <i class="fa fa-arrow-circle-right"></i></button>
                                 </div>
                             </div>
                         </div>
-                    </form>     
+                    {{ Form::close() }}
+
                     <div class="form-footer color">
                         <a href="#" class="popup-password"> Lost your password?</a>                        
                     </div>

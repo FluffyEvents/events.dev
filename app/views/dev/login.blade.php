@@ -1,4 +1,4 @@
-@extends('dev.layout')
+@extends('layouts.master')
 
 
 @section('content')
@@ -12,19 +12,19 @@
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="control-label" for="email">Email</label>
-  <div class="">
-  <input id="email" name="email" type="text" value="{{{ Input::old('email') }}}" class="form-control input-md" required="">
-
-  </div>
+    <label class="control-label" for="email">Email</label>
+    <div class="">
+    {{-- <input id="email" name="email" type="text" value="{{{ Input::old('email') }}}" class="form-control input-md" required=""> --}}
+    {{ Form::email('email', null, array('class' => 'form-control input-md')) }}
+    </div>
 </div>
 
 <!-- Password -->
 <div class="form-group">
     <label class="control-label" for="password">Password</label>
-  <div class="">
-      <input id="password" name="password" type="password" value="" class="form-control input-md" required="">
-  </div>
+    <div class="">
+        <input id="password" name="password" type="password" value="" class="form-control input-md" required="">
+    </div>
 </div>
 
 <!-- Button -->

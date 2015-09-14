@@ -39,7 +39,7 @@
                         <div class="container">
                             <div class="div-table">
                                 <div class="div-cell">
-                                    <h3 class="caption-subtitle">We Are<br>Fur-ious Event Planners</h3>
+                                    <h3 class="caption-subtitle">Fur-ious Events</h3>
                                     <h4><span>You Can Find "<a href="#">Festivals</a>, <a href="#">Parties</a>, <a href="#">Conference</a>, <a href="#">Fairs</a>, <a href="#">Exhibitions</a>, <a href="#">Speakers</a> and more</span></h4>
                                     <div class="row">
                                         <div class="col-md-8 col-md-offset-2">
@@ -60,7 +60,7 @@
                                     </div>
                                     <p class="caption-text">
                                         <a class="btn btn-theme btn-theme btn-theme-dark scroll-to" href="#" data-animation="flipInY" data-animation-delay="600">Popular Events</a><!--
-                                        --><a class="btn btn-theme btn-theme btn-theme-transparent-white" href="http://www.youtube.com/watch?v=O-zpOMYRi0w" data-gal="prettyPhoto" data-animation="flipInY" data-animation-delay="900">Latest Events</a>
+                                        --><a class="btn btn-theme btn-theme btn-theme-dark scroll-to" href="#" data-animation="flipInY" data-animation-delay="600">Latest Events</a>
                                     </p>
                                 </div>
                             </div>
@@ -100,10 +100,11 @@
 
         <div class="row thumbnails no-padding gallery isotope isotope-items" style="position: relative; overflow: hidden; height: 3032px;">
 
+            {{-- wrap repeat around this div --}}
             <div class="col-md-3 col-sm-6 isotope-item photos" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
                 <div class="thumbnail no-border no-padding">
                     <div class="media">
-                        <img src="assets/img/preview/latest-1a.jpg" alt="">
+                        <img src="assets/img/kitty-1.jpg" alt="">
                         <div class="caption hovered">
                             <div class="caption-wrapper div-table">
                                 <div class="caption-inner div-cell">
@@ -117,14 +118,15 @@
                         <div class="caption hovered back">
                             <div class="caption-wrapper div-table">
                                 <div class="caption-inner div-cell">
-                                    <h3 class="caption-title">CONFERENCE PARTY</h3>
-                                    <p class="caption-category">in Istanbul</p>
+                                    <h3 class="caption-title">CAT PARTY</h3>
+                                    <p class="caption-category">in San Antonio</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            {{-- end repeat around this div --}}
 
             <div class="col-md-3 col-sm-6 isotope-item videos" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 379px, 0px);">
                 <div class="thumbnail no-border no-padding">

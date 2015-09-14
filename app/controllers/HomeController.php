@@ -17,14 +17,14 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
-		return View::make('dev.home');
+		return View::make('index');
 	}
 
 	public function showLogin()
 	{
 		if (!Auth::check()) {
 
-			return View::make('dev.login');
+			return View::make('login');
 
 		} else Redirect::to('/');
 	}
