@@ -3,6 +3,6 @@
 
 @section('content')
 	<div style="text-align: center;">
-		<img src="/dev/original.jpg" alt="" height="700" width="500">
+		<img src="/dev/compose-the-things.png" alt="">
 	</div>
 @stop

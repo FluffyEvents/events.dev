@@ -49,7 +49,7 @@ class HomeController extends BaseController {
 
 	public function submitLogout()
 	{
-		
+
 		Auth::logout();
 		return Redirect::to('/');
 	}
