@@ -284,7 +284,7 @@ body.boxed {
 .page-section.background-img-slider {position: relative;}
 .wide .page-section.background-img-slider,
 .boxed .page-section.background-img-slider > .container {
-    background: transparent url("../img/preview/background-img-slider.jpg") 50% 0 repeat !important;
+    background: transparent url("../img/fluffy.png") 50% 0 repeat !important;
     background-position: 50% 0 !important;
     background-size: cover !important;
 }
@@ -2024,20 +2024,20 @@ textarea {
     right: 5px;
 }
 
-#main-slider .slide5 h2 {color: #ffffff; font-family: 'Roboto', sans-serif; font-weight: 100; font-size: 36px;}
+#main-slider .slide5 h2 {color: #333; font-family: 'Roboto', sans-serif; font-weight: 100; font-size: 36px;}
 #main-slider .slide5 .avatar img {display: inline-block;}
-#main-slider .slide5 .caption-subtitle {color: #ffffff; font-size: 60px;}
+#main-slider .slide5 .caption-subtitle {color: #fefefe; font-size: 60px;}
 #main-slider .slide5 .btn-theme {border-radius: 5px;}
 
 #main-slider .slide5 .countdown-wrapper {font-family: 'Raleway', sans-serif; margin-top: 30px;}
 #main-slider .slide5 .countdown-wrapper .defaultCountdown {max-width: 400px; margin: 0 auto;}
 #main-slider .slide5 .countdown-wrapper .countdown-row {overflow: hidden; display: block;}
-#main-slider .slide5 .countdown-wrapper .countdown-section {border: solid 1px #ffffff; border-radius: 4px;}
+#main-slider .slide5 .countdown-wrapper .countdown-section {border: solid 1px #333399; border-radius: 4px;}
 #main-slider .slide5 .countdown-wrapper .countdown-section {}
 #main-slider .slide5 .countdown-wrapper .countdown-show4 .countdown-section {width: 22.75%; background-color: rgba(255, 255, 255, .1);}
 #main-slider .slide5 .countdown-wrapper .countdown-show4 .countdown-section + .countdown-section {margin-left: 3%;}
-#main-slider .slide5 .countdown-wrapper .countdown-amount {text-shadow: none; font-family: 'Raleway', sans-serif; font-size: 36px; line-height: 36px; font-weight: bold; color: #ffffff; display: block; margin: 5px 0 13px 0; vertical-align: middle;}
-#main-slider .slide5 .countdown-wrapper .countdown-period {text-shadow: none; font-family: 'Raleway', sans-serif; font-size: 12px; line-height: 12px; font-weight: bold; color: #ffffff; border-top: solid 1px #ffffff; padding: 8px 3px;}
+#main-slider .slide5 .countdown-wrapper .countdown-amount {text-shadow: none; font-family: 'Raleway', sans-serif; font-size: 36px; line-height: 36px; font-weight: bold; color: #333; display: block; margin: 5px 0 13px 0; vertical-align: middle;}
+#main-slider .slide5 .countdown-wrapper .countdown-period {text-shadow: none; font-family: 'Raleway', sans-serif; font-size: 12px; line-height: 12px; font-weight: bold; color: #333; border-top: solid 1px #333399; padding: 8px 3px;}
 
 #main-slider .slide6 {text-align: left;}
 #main-slider .slide6 .event-image img {border: solid 5px #b9b6bf; border-radius: 9px;}
@@ -3185,7 +3185,7 @@ footer.post-meta .post-categories {display: block;}
     overflow: hidden;
     padding: 15px;
     background-color: transparent; /*dc143c*/
-    background-color: rgba(220, 20, 60, 0.60);
+    background-color: rgba(51, 51, 153, 0.60);
     color: #ffffff;
     opacity: 0;
     z-index: 10;
@@ -3621,7 +3621,7 @@ footer.post-meta .post-categories {display: block;}
     border-color: #435469;
     color: #ffffff;
 }
-.carousel-slider .owl-theme .owl-controls .owl-nav {position: absolute; right: 0; top: -95px;}
+.carousel-slider .51, 51, 153-theme .owl-controls .owl-nav {position: absolute; right: 0; top: -95px;}
 @media (max-width: 767px) {
     .carousel-slider .owl-theme .owl-controls .owl-nav {position: inherit !important; margin-top: 30px;}
 }
