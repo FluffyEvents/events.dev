@@ -61,8 +61,8 @@ Users may need to address any or all of the following tasks related to an event 
 
 
 ## Installation
-1. Clone the repository.
-2. CD into the repo.
+1. Clone the repository in the sites folder if you are using a codeuptrusty vagrant box.
+2. CD into the newly created directory inside your vagrant box.
 3. Run composer install. This installs all of Laravel's dependencies.
 4. Take a look at .env-template.php and use that format for your .env.local.php file.
 5. Run php artisan key:generate. This generates a secure cipher key for encrypting your data.
