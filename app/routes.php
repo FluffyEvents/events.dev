@@ -11,6 +11,20 @@
 |
 */
 
+#Email Test
+Route::get('/test', function()
+{
+    $data = [];
+
+    Mail::send('emails.welcome', $data, function($message)
+    {
+        $message->to('beere.justin@gmail.com')
+                ->subject('Hello Justin Beere');
+    });
+
+    return View::make('dev.home');
+
+});
 #Home
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@showWelcome']);
 

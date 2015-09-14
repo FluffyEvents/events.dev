@@ -6,4 +6,3 @@ composer.phar
 .DS_Store
 Thumbs.db
 public/dev
-app/views/dev
