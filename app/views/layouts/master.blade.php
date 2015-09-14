@@ -10,21 +10,21 @@
         @yield('title')
 
         <!-- Favicons -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/apple-touch-icon-144-precomposed.png">
         <link rel="shortcut icon" href="assets/ico/favicon.ico">
 
         <!-- CSS Global -->
-        <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link href="assets/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
-        <link href="assets/plugins/owlcarousel2/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="assets/plugins/owlcarousel2/assets/owl.theme.default.min.css" rel="stylesheet">
-        <link href="assets/plugins/prettyphoto/css/prettyPhoto.css" rel="stylesheet">
-        <link href="assets/plugins/animate/animate.min.css" rel="stylesheet">
-        <link href="assets/plugins/countdown/jquery.countdown.css" rel="stylesheet">
+        <link href="/assets/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+        <link href="/assets/plugins/owlcarousel2/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="/assets/plugins/owlcarousel2/assets/owl.theme.default.min.css" rel="stylesheet">
+        <link href="/assets/plugins/prettyphoto/css/prettyPhoto.css" rel="stylesheet">
+        <link href="/assets/plugins/animate/animate.min.css" rel="stylesheet">
+        <link href="/assets/plugins/countdown/jquery.countdown.css" rel="stylesheet">
 
-        <link href="assets/css/theme.css" rel="stylesheet">
-        <link href="assets/css/custom.css" rel="stylesheet">
+        <link href="/assets/css/theme.css" rel="stylesheet">
+        <link href="/assets/css/custom.css" rel="stylesheet">
 
         <!--[if lt IE 9]>
         <script src="assets/plugins/iesupport/html5shiv.js"></script>
@@ -125,9 +125,9 @@
             <div class="content-area">
 
                 @yield('content')
-            
 
-            
+
+
 
 
 
@@ -159,7 +159,7 @@
 
     <!-- Popup: Login -->
     <div class="modal fade login-register" id="popup-login" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-lg" id="main-slider">                 
+        <div class="modal-dialog modal-lg" id="main-slider">
             <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
 
             <div class="form-background">
@@ -184,7 +184,7 @@
                                     
                                     <input data-toggle="tooltip" class="form-control input-password" data-original-title="Password" id="password" name="password" type="password" value="">
                                 </div>
-                            </div>                                  
+                            </div>
                             <div class="col-sm-12">
                                 <div class="text-center">
                                     @if(Session::has('loginError'))
@@ -196,10 +196,11 @@
                         </div>
                     {{ Form::close() }}
 
+
                     <div class="form-footer color">
-                        <a href="#" class="popup-password"> Lost your password?</a>                        
+                        <a href="#" class="popup-password"> Lost your password?</a>
                     </div>
-                </div> 
+                </div>
 
                 <div class="popup-form col-sm-6">
                     <div class="form-header color">
@@ -220,15 +221,15 @@
                                 <div class="form-group">
                                     <input type="text" title="" data-toggle="tooltip" class="form-control input-password" data-original-title="Password">
                                 </div>
-                            </div>                                  
+                            </div>
                             <div class="col-sm-12">
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-theme btn-block submit-button animated flipInY visible" data-animation-delay="100" data-animation="flipInY"> Register Now <i class="fa fa-arrow-circle-right"></i></button>
                                 </div>
                             </div>
                         </div>
-                    </form>                         
-                </div> 
+                    </form>
+                </div>
 
             </div>
         </div>
@@ -238,29 +239,29 @@
 
     <!-- JS Global -->
 
-    <!--[if lt IE 9]><script src="assets/plugins/jquery/jquery-1.11.1.min.js"></script><![endif]-->
-    <!--[if gte IE 9]><!--><script src="assets/plugins/jquery/jquery-2.1.1.min.js"></script><!--<![endif]-->
-    <script src="assets/plugins/modernizr.custom.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/plugins/bootstrap-select/bootstrap-select.min.js"></script>
-    <script src="assets/plugins/superfish/js/superfish.js"></script>
-    <script src="assets/plugins/prettyphoto/js/jquery.prettyPhoto.js"></script>
-    <script src="assets/plugins/placeholdem.min.js"></script>
-    <script src="assets/plugins/jquery.smoothscroll.min.js"></script>
-    <script src="assets/plugins/jquery.easing.min.js"></script>
-    <script src="assets/plugins/smooth-scrollbar.min.js"></script>
+    <!--[if lt IE 9]><script src="/assets/plugins/jquery/jquery-1.11.1.min.js"></script><![endif]-->
+    <!--[if gte IE 9]><!--><script src="/assets/plugins/jquery/jquery-2.1.1.min.js"></script><!--<![endif]-->
+    <script src="/assets/plugins/modernizr.custom.js"></script>
+    <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="/assets/plugins/superfish/js/superfish.js"></script>
+    <script src="/assets/plugins/prettyphoto/js/jquery.prettyPhoto.js"></script>
+    <script src="/assets/plugins/placeholdem.min.js"></script>
+    <script src="/assets/plugins/jquery.smoothscroll.min.js"></script>
+    <script src="/assets/plugins/jquery.easing.min.js"></script>
+    <script src="/assets/plugins/smooth-scrollbar.min.js"></script>
 
     <!-- JS Page Level -->
-    <script src="assets/plugins/owlcarousel2/owl.carousel.min.js"></script>
-    <script src="assets/plugins/waypoints/waypoints.min.js"></script>
-    <script src="assets/plugins/countdown/jquery.plugin.min.js"></script>
-    <script src="assets/plugins/countdown/jquery.countdown.min.js"></script>
-    <script src="assets/plugins/isotope/jquery.isotope.min.js"></script>
+    <script src="/assets/plugins/owlcarousel2/owl.carousel.min.js"></script>
+    <script src="/assets/plugins/waypoints/waypoints.min.js"></script>
+    <script src="/assets/plugins/countdown/jquery.plugin.min.js"></script>
+    <script src="/assets/plugins/countdown/jquery.countdown.min.js"></script>
+    <script src="/assets/plugins/isotope/jquery.isotope.min.js"></script>
     <!--script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script><script src="https://maps.googleapis.com/maps-api-v3/api/js/22/2/main.js"></script-->
 
-    <script src="assets/js/theme-ajax-mail.js"></script>
-    <script src="assets/js/theme.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="/assets/js/theme-ajax-mail.js"></script>
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/custom.js"></script>
 
     <script type="text/javascript">
         "use strict";

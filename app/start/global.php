@@ -61,6 +61,10 @@ App::error(function(Illuminate\Database\Eloquent\ModelNotFoundException $excepti
     return Redirect::home();
 });
 
+App::error(function(Laracasts\Validation\FormValidationException $exception, $code)
+{
+    return Redirect::back()->withInput()->withErrors($exception->getErrors());
+});
 /*
 |--------------------------------------------------------------------------
 | Maintenance Mode Handler

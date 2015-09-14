@@ -1,4 +1,5 @@
 <?php
+use Acme\Forms\CalendarEventForm;
 
 class CalendarEventsController extends \BaseController {
 
@@ -7,6 +8,15 @@ class CalendarEventsController extends \BaseController {
 	 *
 	 * @return Response
 	 */
+	 public function __construct(CalendarEventForm $calendarEventForm)
+ 	 {
+ 		 parent::__construct();
+
+		 $this->calendarEventForm = $calendarEventForm;
+
+ 		 $this->beforeFilter('auth', array('except' => array('index', 'show')));
+
+ 	 }
 	public function index()
 	{
 		$events = CalendarEvent::all();
@@ -43,30 +53,29 @@ class CalendarEventsController extends \BaseController {
 	public function store()
 	{
 		// Grab the Input data for the Location
-		$input = Input::only('name', 'address', 'city', 'state', 'postal_code');
+		$input = Input::only('name', 'address', 'city', 'state', 'postal_code',
+		'start_time', 'end_time', 'title', 'description', 'price');
+
+		//validate:form exceptions handled in start/global.php
+		$this->calendarEventForm->validate($input);
 
 		$location = Location::create($input);
 
-		// Redirect Back With Ensensi Errors on Creation Failure
-		if (!$location) return Redirect::back()->withErrors($location->getErrors())->withInput();
+		$calendarEvent = CalendarEvent::create(array(
+			'start_time' => Input::get('start_time'),
+			'end_time' => Input::get('end_time'),
+			'title' => Input::get('title'),
+			'description' => Input::get('description'),
+			'price' => Input::get('price'),
+			'location_id' => $location->id,
+			'user_id' => Auth::id()
+		));
 
-		// Grab the Input data for the CalendarEvent
-		$input = Input::only('starts_at', 'ends_at', 'title', 'description', 'price');
 
-		// add user_id to $input as $data array
-		$data = array_add($input, 'user_id', Auth::id());
-
-		// add location_id to $data array
-		$data = array_add($data, 'location_id', $location->id);
-
-		$calendarEvent = CalendarEvent::create($data);
-
-		// On Failure Redirect Back With Ensensi Errors and the Created Location
-		// TODO Redirect with $location so multiple locations do not get added to DB on calendarEvent creation failure
-		if (!$calendarEvent) return Redirect::back()->withErrors($calendarEvent->getErrors())->withInput();
+		return Response::json(CalendarEvent::with('user', 'location')->where('user_id', Auth::id())->get());
 
 		// On Successful Creation Show The Event Page
-		return Redirect::action('CalendarEventsController@show', $calendarEvent->id);
+		// return Redirect::action('CalendarEventsController@show', $calendarEvent->id);
 	}
 
 	/**
@@ -79,7 +88,7 @@ class CalendarEventsController extends \BaseController {
 	{
 		// $calendarEvent = CalendarEvent::findOrFail($id);
 
-		return View::make('calendarevents.show', compact('calendarEvent'));
+		return View::make('calendar_events.show', compact('calendarEvent'));
 	}
 
 	/**

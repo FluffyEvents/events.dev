@@ -1,8 +1,7 @@
 <?php
 
-use \Esensi\Model\Model;
 
-class Location extends Model {
+class Location extends \Eloquent {
 
 	// Add your validation rules here
 	protected $rules = [
