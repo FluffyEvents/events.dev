@@ -18,7 +18,7 @@
                         <div class="container">
                             <div class="div-table">
                                 <div class="div-cell">
-                                    <p class="text-center avatar"><img src="assets/img/preview/slider-4-avatar.png" style="width: auto;" alt=""/></p>
+                                    {{-- <p class="text-center avatar"><img src="assets/img/preview/slider-4-avatar.png" style="width: auto;" alt=""/></p> --}}
                                     <h2 data-animation="fadeInDown" data-animation-delay="100"><span>15 October at 20:00 - 22:00</span></h2>
                                     <h3 class="caption-subtitle" data-animation="fadeInUp" data-animation-delay="300">Fluffy-Con in San Antonio</h3>
                                     <div class="countdown-wrapper">
@@ -39,7 +39,7 @@
                         <div class="container">
                             <div class="div-table">
                                 <div class="div-cell">
-                                    <h3 class="caption-subtitle">We are Event professionals</h3>
+                                    <h3 class="caption-subtitle">We Are<br>Fur-ious Event Planners</h3>
                                     <h4><span>You Can Find "<a href="#">Festivals</a>, <a href="#">Parties</a>, <a href="#">Conference</a>, <a href="#">Fairs</a>, <a href="#">Exhibitions</a>, <a href="#">Speakers</a> and more</span></h4>
                                     <div class="row">
                                         <div class="col-md-8 col-md-offset-2">
