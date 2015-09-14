@@ -11,4 +11,32 @@
 |
 */
 
-Route::get('/', 'HomeController@showWelcome');
+#Email Test
+Route::get('/test', function()
+{
+    $data = [];
+
+    Mail::send('emails.welcome', $data, function($message)
+    {
+        $message->to('beere.justin@gmail.com')
+                ->subject('Hello Justin Beere');
+    });
+
+    return View::make('dev.home');
+
+});
+#Home
+Route::get('/', ['as' => 'home', 'uses' => 'HomeController@showWelcome']);
+
+#Manage Events Dashboard
+Route::get('/events/manage', 'CalendarEventsController@currentUserEvents');
+
+#Events Resource
+Route::model('events', 'CalendarEvent');
+Route::resource('events', 'CalendarEventsController');
+
+
+# Authentication
+Route::get('login', ['as' => 'login', 'uses' => 'HomeController@showLogin']);
+Route::post('login', ['as' => 'login', 'uses' => 'HomeController@submitLogin']);
+Route::get('logout', ['as' => 'logout', 'uses' => 'HomeController@submitLogout']);

@@ -1,24 +1,83 @@
-## Laravel PHP Framework
+#Laravel 4.2 Event Management Application
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+#Basic Spec/Description
+Event Planning Application : A Laravel application that manages user created events.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Spec Layout:
+- The look of the application is totally up to you.
+
+Spec Packages:
+Packages:
+- Ways Generators
+- Esensi Model
+
+
+Spec Models:
+- Users
+    - first_name
+    - last_name
+    - email
+    - password
+
+- CalendarEvents
+    - starts_at
+    - ends_at
+    - title
+    - description
+    - price
+    - user_id
+    - location_id
+
+- Locations
+    - name
+    - address
+    - city
+    - state
+    - postal_code
+
+Spec Resource Controllers:
+- CalendarEventsController
+
+
+# Over-Achiever's TODO
+Bonus:
+- Event image(s)
+- Add Longitude/Lattitude to Location
+- Show google map of event location
+- Add functionality for visitors to register for an event
+
+
+#Application User Profiling
+Users may need to address any or all of the following tasks related to an event outside the current application scope:
+- Conduct event research (Wolfram Alpha)
+- Organize food, decorations and entertainment for an event
+- Plan transportation to and from the event location/locations
+- Send invitations to target audience/Manage event marketing campaign
+- Arranging any necessary accommodations for attendees/registrants
+- Coordinating the activities of event personnel
+- Evaluating event statistics before, during and after an event's life cycle
+
+
+## Installation
+1. Clone the repository.
+2. CD into the repo.
+3. Run composer install. This installs all of Laravel's dependencies.
+4. Take a look at .env-template.php and use that format for your .env.local.php file.
+5. Run php artisan key:generate. This generates a secure cipher key for encrypting your data.
+6. Run php artisan serve. This serves your application to the browser. You can also use Homestead, LAMP, WAMP, etc.
+
+## Contributing
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
 
 ## Official Documentation
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
-
-### Contributing To Laravel
-
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+Documentation for Laravel 4.2 can be found on the [http://laravel.com/docs/4.2](http://laravel.com/docs/4.2).
 
 ### License
 

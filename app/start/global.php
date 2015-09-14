@@ -45,10 +45,20 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 | shown, which includes a detailed stack trace during debug.
 |
 */
+App::missing(function($exception)
+{
+	return Response::view('dev.404', array(), 404);
+});
 
 App::error(function(Exception $exception, $code)
 {
 	Log::error($exception);
+});
+
+App::error(function(Illuminate\Database\Eloquent\ModelNotFoundException $exception)
+{
+    // do whatever here. 404, flash message, etc.
+    return Redirect::home();
 });
 
 /*

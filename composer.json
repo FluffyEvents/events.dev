@@ -15,7 +15,11 @@
 			"app/database/migrations",
 			"app/database/seeds",
 			"app/tests/TestCase.php"
-		]
+		],
+
+		"files": [
+            "app/helpers.php"
+        ]
 	},
 	"scripts": {
 		"post-install-cmd": [
@@ -35,6 +39,8 @@
 	},
 	"minimum-stability": "stable",
 	"require-dev": {
-		"way/generators": "~2.0"
+		"way/generators": "~2.0",
+		"fzaninotto/faker": "1.5.*@dev",
+		"barryvdh/laravel-debugbar" : "1.8.*"
 	}
 }
