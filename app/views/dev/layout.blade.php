@@ -9,8 +9,6 @@
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/jquery.tagsinput.css" />
-    <link rel="stylesheet" href="/css/select2.min.css" />
     <style>
     @import url(https://fonts.googleapis.com/css?family=Roboto);
     html, body {
@@ -86,8 +84,8 @@
 <body>
 
 <div class="text-center" id="header">
-  <h1>I'm beginning to feel like a Rap God</h1>
-  <p class="lead">Rap God</p>
+  <h1>Laravel 4.2</h1>
+  <p class="lead">Event Manager App</p>
 </div>
 
 <div id="body">
@@ -102,8 +100,7 @@
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="/js/jquery.tagsinput.js"></script>
-<script src="/js/select2.min.js"></script>
+
 
 @yield('scripts')
 </body>
