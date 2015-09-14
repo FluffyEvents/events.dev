@@ -21,8 +21,8 @@ class CreateLocationsTable extends Migration {
 			$table->string('city');
 			$table->string('state');
 			$table->string('postal_code', 5);
-			$table->string('longitude', 28);
-			$table->string('latitude', 28);
+			$table->string('longitude', 28)->nullable();
+			$table->string('latitude', 28)->nullable();
 			$table->string('website_url', 264)->nullable();
 		});
 	}

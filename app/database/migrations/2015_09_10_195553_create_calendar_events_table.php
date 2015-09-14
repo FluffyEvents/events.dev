@@ -21,8 +21,8 @@ class CreateCalendarEventsTable extends Migration {
 			$table->string('description', 4000);
 			$table->decimal('price', 10, 2)->nullable();
 			$table->boolean('show_google_map')->default(false);
-			$table->timestamp('starts_at');
-			$table->timestamp('ends_at');
+			$table->dateTime('start_time');
+			$table->dateTime('end_time');
 			$table->softDeletes();
 			$table->timestamps();
 

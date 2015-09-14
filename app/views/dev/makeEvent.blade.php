@@ -17,3 +17,27 @@
 </div>
 </div>
 @stop
+@section('scripts')
+<script src="/assets/js/jquery.js"></script>
+<script src="/assets/js/jquery.datetimepicker.js"></script>
+<script src="http://momentjs.com/downloads/moment.min.js"></script>
+<script>
+    Date.parseDate = function( input, format ){
+      return moment(input,format).toDate();
+    };
+    Date.prototype.dateFormat = function( format ){
+      return moment(this).format(format);
+    };
+
+    jQuery('#startsAtDateTimePicker').datetimepicker({
+        format:'YYYY-MM-DD h:mm:ss',
+        formatTime:'h:mm a',
+        formatDate:'DD-MM-YYYY'
+    });
+    jQuery('#endsAtDateTimePicker').datetimepicker({
+        format:'YYYY-MM-DD h:mm:ss',
+        formatTime:'h:mm a',
+        formatDate:'DD-MM-YYYY'
+    });
+</script>
+@stop

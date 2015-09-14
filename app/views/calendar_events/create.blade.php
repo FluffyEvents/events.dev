@@ -1,13 +1,13 @@
 <div class="form-group">
-    {{ Form::label('starts_at', 'Event Start Time/Date:') }}
-    {{ Form::text('starts_at', null, ['class' => 'form-control']) }}
-    {{ errors_for('starts_at', $errors) }}
+    {{ Form::label('start_time', 'Event Start Time/Date:') }}
+    {{ Form::text('start_time', null, ['class' => 'form-control', 'id' => 'startsAtDateTimePicker']) }}
+    {{ errors_for('start_time', $errors) }}
 </div>
 
 <div class="form-group">
-    {{ Form::label('ends_at', 'Event End Time/Date:') }}
-    {{ Form::text('ends_at', null, ['class' => 'form-control']) }}
-    {{ errors_for('ends_at', $errors) }}
+    {{ Form::label('end_time', 'Event End Time/Date:') }}
+    {{ Form::text('end_time', null, ['class' => 'form-control', 'id' => 'endsAtDateTimePicker']) }}
+    {{ errors_for('end_time', $errors) }}
 </div>
 
 <div class="form-group">
@@ -24,7 +24,7 @@
 
 <div class="form-group">
     {{ Form::label('price', 'Price:') }}
-    {{ Form::number('price', null, ['class' => 'form-control']) }}
+    {{ Form::text('price', null, ['class' => 'form-control']) }}
     {{ errors_for('price', $errors) }}
 </div>
 

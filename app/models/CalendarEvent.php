@@ -1,22 +1,21 @@
 <?php
 
-use \Esensi\Model\Model;
 
-class CalendarEvent extends Model {
+class CalendarEvent extends \Eloquent {
 
 	protected $table = 'calendar_events';
 
 	protected $rules = array(
-		'starts_at' => 'required|email|max:255|unique:users',
-		'ends_at' => 'required|max:255',
+		'start_time' => 'required|max:255',
+		'end_time' => 'required|max:255',
 		'title' => 'required|max:255',
 		'description' => 'required|max:4000',
 		'price' => 'integer|max:10'
 	);
 
 	protected $fillable = array(
-	    'starts_At',
-	    'ends_at',
+	    'start_time',
+	    'end_time',
 	    'title',
 	    'description',
 	    'price',
@@ -26,7 +25,7 @@ class CalendarEvent extends Model {
 
 	public function getDates()
 	{
-		return array_merge(parent::getDates(), ['starts_at', 'ends_at']);
+		return array_merge(parent::getDates(), ['start_time', 'end_time']);
 	}
 
 	public function user()

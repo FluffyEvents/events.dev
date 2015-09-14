@@ -9,6 +9,9 @@
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- jQuery DateTimePicker -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/jquery.datetimepicker.css"/ >
+
     <style>
     @import url(https://fonts.googleapis.com/css?family=Roboto);
     html, body {
