@@ -264,7 +264,7 @@ body.boxed {
     padding-top: 100px;
     padding-bottom: 100px;
     background-attachment: fixed;
-    background-image: url('../img/preview/background-img-slider.jpg');
+    background-image: url('../img/fluffy.png');
     background-size: cover !important;
     background-position: 50% 0 !important;
     background-repeat: no-repeat;
@@ -882,7 +882,7 @@ textarea {
 .registration-form {margin-top: -15px;}
 .registration-form .form-group {margin-top: 15px; margin-bottom: 0;}
 .form-group.with-icon {position: relative;}
-.form-group.with-icon .fa {position: absolute; top: 20px; right: 15px;}
+.form-group.with-icon .fa {position: absolute; top: 48px; right: 15px;}
 .registration-form .form-group.selectpicker-wrapper {z-index: 1; position: relative;}
 .registration-form .bootstrap-select.btn-group:not(.input-group-btn),
 .registration-form .bootstrap-select.btn-group[class*="span"] {margin-bottom: 0;}
@@ -1246,12 +1246,12 @@ textarea {
     display: none;
     position: absolute;
     top: 30px;
-    right: 230px;
+    right: 395px;
     z-index: 11;
 }
 .multipage .shrink .header-search-wrapper {
     top: 8px;
-    right: 190px;
+    right: 330px;
 }
 @media (max-width: 991px) {
     .multipage .header-search-wrapper,
@@ -1383,7 +1383,7 @@ textarea {
     .sf-menu ul {display: block !important; position: relative;}
     .sf-menu ul li {background-color: transparent;}
     .menu-toggle {display: block; z-index: 1;}
-    .navigation.closed .menu-toggle {right: 15px;}
+    .navigation.closed .menu-toggle {right: 15px; top: 40px;}
     .navigation.opened .menu-toggle {right: 15px; top: 7px;}
 }
 
@@ -2026,7 +2026,7 @@ textarea {
 
 #main-slider .slide5 h2 {color: #000; font-family: 'Roboto', sans-serif; font-weight: 100; font-size: 36px;}
 #main-slider .slide5 .avatar img {display: inline-block;}
-#main-slider .slide5 .caption-subtitle {color: #708090; font-size: 60px;}
+#main-slider .slide5 .caption-subtitle {color: #333; font-size: 60px;}
 #main-slider .slide5 .btn-theme {border-radius: 5px;}
 
 #main-slider .slide5 .countdown-wrapper {font-family: 'Raleway', sans-serif; margin-top: 30px;}
