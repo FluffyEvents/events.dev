@@ -41,10 +41,9 @@
                         <div class="form-group with-icon">
                         {{ Form::label('email', 'Email') }}
                             <i class="fa fa-user"></i>
-                            {{ Form::email('email', null,
+                            {{ Form::text('email', null,
                                 array('class' => 'form-control input-email',
                                 'id' => 'email',
-                                'placeholder' => 'Email address',
                                 'data-toggle' => 'tooltip',
                                 'value' => "{{{ Input::old('email') }}}",
                                 'data-original-title' => 'Email is required',
@@ -89,15 +88,25 @@
                 <div class="row">
                     <div class="col-sm-12 form-alert"></div>
                     <div class="col-sm-6">
-                        <div class="form-group">
+                        <div class="form-group with-icon">
                             {{ Form::label('first_name', 'First name') }}
-                            <input type="text" class="form-control input-name" data-toggle="tooltip" title="" data-original-title="First name is required" placeholder="First name">
+                            {{ Form::text('first_name', null,
+                                array('class' => 'form-control input-name',
+                                'id' => 'first_name',
+                                'data-toggle' => 'tooltip',
+                                'data-original-title' => 'First name is required',
+                                'type' => 'text')) }}
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="form-group">
+                        <div class="form-group with-icon">
                             {{ Form::label('last_name', 'Last name') }}
-                            <input type="text" class="form-control input-email" data-toggle="tooltip" title="" data-original-title="Last name is required" placeholder="Last name">
+                            {{ Form::text('last_name', null,
+                                array('class' => 'form-control input-name',
+                                'id' => 'last_name',
+                                'data-toggle' => 'tooltip',
+                                'data-original-title' => 'Last name is required',
+                                'type' => 'text')) }}
                         </div>
                     </div>
                 </div>
@@ -105,21 +114,39 @@
                 <div class="row">
                     <div class="col-sm-12 form-alert"></div>
                     <div class="col-sm-12">
-                        <div class="form-group">
-                            {{ Form::label('email', 'Email') }}
-                            <input type="text" class="form-control input-name" data-toggle="tooltip" title="" data-original-title="Email is required" placeholder="Email address">
+                        <div class="form-group with-icon">
+                            {{ Form::label('register_email', 'Email') }}
+                            <i class="fa fa-envelope"></i>
+                            {{ Form::text('email', null,
+                                array('class' => 'form-control input-email',
+                                'id' => 'register_email',
+                                'data-toggle' => 'tooltip',
+                                'data-original-title' => 'Email is required',
+                                'type' => 'text')) }}
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="form-group">
-                            {{ Form::label('password', 'Password') }}
-                            <input type="password" class="form-control input-email" data-toggle="tooltip" title="" data-original-title="Password is required">
+                        <div class="form-group with-icon">
+                            {{ Form::label('register_password', 'Password') }}
+                            <i class="fa fa-lock"></i>
+                            {{ Form::password('register_password',
+                                array('class' => 'form-control input-password',
+                                'id' => 'register_password',
+                                'data-toggle' => 'tooltip',
+                                'data-original-title' => 'Password is required',
+                                'type' => 'text')) }}
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="form-group">
+                        <div class="form-group with-icon">
                             {{ Form::label('password_confirmation', 'Retype your password') }}
-                            <input type="password" class="form-control input-email" data-toggle="tooltip" title="" data-original-title="Password confirmation is required">
+                            <i class="fa fa-lock"></i>
+                            {{ Form::password('password_confirmation',
+                                array('class' => 'form-control input-password',
+                                'id' => 'password_confirmation',
+                                'data-toggle' => 'tooltip',
+                                'data-original-title' => 'Password confirmation is required',
+                                'type' => 'text')) }}
                         </div>
                     </div>
 
