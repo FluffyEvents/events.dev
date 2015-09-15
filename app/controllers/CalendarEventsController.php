@@ -21,7 +21,7 @@ class CalendarEventsController extends \BaseController {
 	{
 		$events = CalendarEvent::all();
 
-		return View::make('hello', compact('events'));
+		return View::make('calendar_events.index', compact('events'));
 	}
 
 	/**

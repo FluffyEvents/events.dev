@@ -2,6 +2,10 @@
 
 @extends('layouts.master')
 
+@section('title')
+<title>Event</title>
+@stop
+
 
 @section('content')
 <div class="content-area">
@@ -2930,3 +2934,5 @@
                 <!-- /PAGE -->
 
             </div>
+
+@stop

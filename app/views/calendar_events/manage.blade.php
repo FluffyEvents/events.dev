@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-<title>Events Index</title>
+<title>Manage Events</title>
 @stop
 
 @section('content')

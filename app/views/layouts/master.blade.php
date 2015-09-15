@@ -48,77 +48,51 @@
     <div class="wrapper">
 
        <header class="header fixed shrink">
+            
+            <div class="container">
+                <div class="header-wrapper clearfix">
 
-                <!-- Top Line -->
-                <div class="top-line">
-                    <div class="container">
-                        <ul class="user-menu">
-                            <li><a href="/login"><i class="fa fa-user"></i> Login / Register Here</a></li>
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="/" class="scroll-to">
+                            <span class="fa-stack">
+                                <i class="fa logo-hex fa-stack-2x"></i>
+                                <i class="fa logo-fa fa-paw fa-stack-1x"></i>
+                            </span>
+                            Fluffy Events
+                        </a>
+                    </div>
+                    <!-- /Logo -->
+
+                    <!-- Navigation -->
+                    <div id="mobile-menu"></div>
+                    <nav class="navigation closed clearfix">
+                        <a href="#" class="menu-toggle btn"><i class="fa fa-bars"></i></a>
+                        <ul class="sf-menu nav sf-js-enabled sf-arrows">
+
+                            <li class="header-search-wrapper">
+                                <form action="#" class="header-search-form">
+                                    <input type="text" class="form-control header-search" placeholder="Search Fluffy">
+                                    <input type="submit" hidden="hidden">
+                                </form>
+                            </li>
+                            <li><a href="#" class="btn-search-toggle"><i class="fa fa-search"></i></a></li>
+
+
+                            @if ( Auth::check() )
+                                <li class=""><a href="logout"><i class="fa fa-sign-out"></i> Logout</a></li>
+                                <li><a href="events/index" class="btn btn-theme btn-submit-event">MANAGE YOUR EVENTS <i class="fa fa-plus-circle"></i></a></li>
+                            @else
+                                <li class=""><a href="login"><i class="fa fa-user"></i> Login / Register Here</a></li>
+                                <li><a href="login" class="btn btn-theme btn-submit-event">SUBMIT AN EVENT <i class="fa fa-plus-circle"></i></a></li>
+                            @endif
                         </ul>
-                        {{-- <div class="hot-line"><span><i class="fa fa-calendar"></i> <strong>Latest Event:</strong></span>  Standart Event Name Here  "15 October at 20:00 - 22:00 on Manhattan / New York"</div> --}}
-                    </div>
+                    </nav>
+                    <!-- /Navigation -->
+
                 </div>
-                <!-- /Top Line -->
-
-                <div class="container">
-                    <div class="header-wrapper clearfix">
-
-                        <!-- Logo -->
-                        <div class="logo">
-                            <a href="/" class="scroll-to">
-                                <span class="fa-stack">
-                                    <i class="fa logo-hex fa-stack-2x"></i>
-                                    <i class="fa logo-fa fa-paw fa-stack-1x"></i>
-                                </span>
-                                Fluffy Events
-                            </a>
-                        </div>
-                        <!-- /Logo -->
-
-                        <!-- Navigation -->
-                        <div id="mobile-menu"></div>
-                        <nav class="navigation closed clearfix">
-                            <a href="#" class="menu-toggle btn"><i class="fa fa-bars"></i></a>
-                            <ul class="sf-menu nav sf-js-enabled sf-arrows">
-                                <li class="">
-                                    <a href="{{ action('HomeController@showWelcome')}}" class="sf-with-ul">Home</a>
-                                </li>
-                                <li class="">
-                                    <a href="/events" class="sf-with-ul">Events</a>
-                                    <ul style="display: none;">
-                                        <li><a href="event-list.html">Event List</a></li>
-                                        <li><a href="event-grid.html">Event Grid</a></li>
-                                        <li><a href="event-single.html">Single Event</a></li>
-                                    </ul>
-                                </li>
-                                <li class="">
-                                    <a href="blog.html" class="sf-with-ul">Pages</a>
-                                    <ul style="display: none;">
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-single.html">Blog Single</a></li>
-                                        <li><a href="search-results.html">Search Results</a></li>
-                                        <li><a href="coming-soon-1.html">Coming Soon 1</a></li>
-                                        <li><a href="coming-soon-2.html">Coming Soon 2</a></li>
-                                        <li><a href="coming-soon-3.html">Coming Soon 3</a></li>
-                                        <li><a href="error-page.html">404</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact-us.html">Contact Us</a></li>
-                                <li class="header-search-wrapper">
-                                    <form action="#" class="header-search-form">
-                                        <input type="text" class="form-control header-search">
-                                        <input type="submit" hidden="hidden">
-                                    </form>
-                                </li>
-                                <li><a href="#" class="btn-search-toggle"><i class="fa fa-search"></i></a></li>
-                                <li><a href="#" class="btn btn-theme btn-submit-event">SUBMIT EVENT <i class="fa fa-plus-circle"></i></a></li>
-                            </ul>
-                        </nav>
-                        <!-- /Navigation -->
-
-                    </div>
-                </div>
-            </header>
+            </div>
+        </header>
         <!-- /HEADER -->
 
         <!-- Content area -->
@@ -249,7 +223,7 @@
     <script src="/assets/plugins/placeholdem.min.js"></script>
     <script src="/assets/plugins/jquery.smoothscroll.min.js"></script>
     <script src="/assets/plugins/jquery.easing.min.js"></script>
-    <script src="/assets/plugins/smooth-scrollbar.min.js"></script>
+    <!-- <script src="/assets/plugins/smooth-scrollbar.min.js"></script> -->
 
     <!-- JS Page Level -->
     <script src="/assets/plugins/owlcarousel2/owl.carousel.min.js"></script>
@@ -314,6 +288,8 @@
         });
 
     </script>
+
+    @yield('scripts')
 
 </body>
 
