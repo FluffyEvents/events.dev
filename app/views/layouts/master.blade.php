@@ -25,6 +25,7 @@
 
         <link href="/assets/css/theme.css" rel="stylesheet">
         <link href="/assets/css/custom.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="/assets/css/jquery.datetimepicker.css"/ >
 
         <!--[if lt IE 9]>
         <script src="assets/plugins/iesupport/html5shiv.js"></script>
@@ -48,7 +49,7 @@
     <div class="wrapper">
 
        <header class="header fixed shrink">
-            
+
             <div class="container">
                 <div class="header-wrapper clearfix">
 
@@ -81,10 +82,12 @@
 
                             @if ( Auth::check() )
                                 <li class=""><a href="logout"><i class="fa fa-sign-out"></i> Logout</a></li>
-                                <li><a href="events/index" class="btn btn-theme btn-submit-event">MANAGE YOUR EVENTS <i class="fa fa-plus-circle"></i></a></li>
+								<li><a href="/events/create" class="">Create New Event <i class="fa fa-plus-circle"></i></a></li>
+
+                                <li><a href="/events/manage" class="btn btn-theme btn-submit-event">Manage Your Events</a></li>
                             @else
                                 <li class=""><a href="login"><i class="fa fa-user"></i> Login / Register Here</a></li>
-                                <li><a href="login" class="btn btn-theme btn-submit-event">SUBMIT AN EVENT <i class="fa fa-plus-circle"></i></a></li>
+                                <li><a href="/events" class="btn btn-theme btn-submit-event">View All Events <i class="fa fa-plus-circle"></i></a></li>
                             @endif
                         </ul>
                     </nav>

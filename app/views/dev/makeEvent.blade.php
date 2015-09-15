@@ -1,6 +1,7 @@
-@extends('dev.layout')
+@extends('layouts.master')
 
 @section('content')
+<hr><hr>
 <div class="container-fluid">
     <div class="col-xs-6 col-xs-offset-3">
     {{ Form::open(array('action' => 'CalendarEventsController@store',
@@ -10,7 +11,7 @@
 @include('calendar_events.create')
 
         <div class="form-group">
-            {{ Form::submit('submit', ['class' => 'btn btn-primary form-control']) }}
+            {{ Form::submit('submit', ['class' => 'btn btn-theme btn-theme-lg submit-button form-control']) }}
         </div>
 
     {{ Form::close() }}
