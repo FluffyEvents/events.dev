@@ -1,4 +1,9 @@
 <div class="form-group">
+    {{ Form::label('location', 'Existing Location:') }}
+    {{ Form::select('location', $locations) }}
+    {{ errors_for('location', $errors) }}
+</div>
+<div class="form-group">
     {{ Form::label('name', 'Location Name:') }}
     {{ Form::text('name', null, ['class' => 'form-control']) }}
     {{ errors_for('name', $errors) }}

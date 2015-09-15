@@ -6,6 +6,8 @@
     <div class="col-xs-6 col-xs-offset-3">
     {{ Form::open(array('action' => 'CalendarEventsController@store',
         'method' => 'POST', 'class' => 'form-horizontal')) }}
+        
+
 @include('locations.create')
 <br>
 @include('calendar_events.create')
