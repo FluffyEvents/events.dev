@@ -29,6 +29,14 @@ class HomeController extends BaseController {
 		} else Redirect::to('/');
 	}
 
+	public function showManageDashboard()
+	{
+		if (!Auth::check()) {
+
+			return View::make('login');
+
+		} else return View::make('dashboard');
+	}
 
 	public function submitLogin()
 	{

@@ -34,7 +34,7 @@ class RegistrationController extends \BaseController {
 	 */
 	public function store()
 	{
-		$input = Input::only('email', 'password', 'password_confirmation');
+		$input = Input::only('email', 'password', 'password_confirmation', 'first_name', 'last_name');
 
 		//form exceptions handled in start/global.php
 		$this->registrationForm->validate($input);
@@ -42,6 +42,13 @@ class RegistrationController extends \BaseController {
 		$user = User::create($input);
 
 		Auth::login($user);
+		//email new user with pertinent new user info and OBLIGATORY WELCOME TO FLUFFYEVENTS
+		// $data = array('user' => $user);
+		// Mail::send('emails.welcome', $data, function($message, $user)
+	    // {
+	    //     $message->to($user->email)
+	    //             ->subject('Welcome to FluffyEvents!');
+	    // });
 
 		return Redirect::home();
 	}

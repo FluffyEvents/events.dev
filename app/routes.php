@@ -15,7 +15,8 @@
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@showWelcome']);
 
 #Manage Events Dashboard
-Route::get('/events/manage', 'CalendarEventsController@currentUserEvents');
+Route::get('/getlists', 'CalendarEventsController@currentUserEvents');
+Route::get('/events/manage', 'HomeController@showManageDashboard');
 
 #Events Resource
 Route::model('events', 'CalendarEvent');

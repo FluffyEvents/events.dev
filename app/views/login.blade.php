@@ -11,19 +11,19 @@
                         <!-- Content -->
                         <section id="content" class="content col-sm-12 col-md-8 col-lg-9">
 
-                                
-                             
+
+
 
                             <!-- -->
                             <hr class="page-divider transparent half">
                             <!-- -->
 
-                           
+
                             <!-- -->
                             <hr class="page-divider transparent">
                             <!-- -->
 
-                            
+
 
                             <!-- -->
                             <hr class="page-divider transparent half2">
@@ -41,11 +41,11 @@
                                         {{ Form::label('email', 'Email') }}
                                         <div class="form-group with-icon">
                                             <i class="fa fa-user"></i>
-                                            {{ Form::email('email', null, 
-                                                array('class' => 'form-control input-email', 
+                                            {{ Form::email('email', null,
+                                                array('class' => 'form-control input-email',
                                                 'id' => 'email',
-                                                'placeholder' => 'Email address', 
-                                                'data-toggle' => 'tooltip', 
+                                                'placeholder' => 'Email address',
+                                                'data-toggle' => 'tooltip',
                                                 'value' => "{{{ Input::old('email') }}}",
                                                 'data-original-title' => 'Email is required',
                                                 'type' => 'text')) }}
@@ -55,16 +55,16 @@
                                         {{ Form::label('password', 'Password') }}
                                         <div class="form-group with-icon">
                                             <i class="fa fa-lock"></i>
-                                            {{ Form::password('password', 
-                                                array('class' => 'form-control', 
-                                                'type' => 'password', 
+                                            {{ Form::password('password',
+                                                array('class' => 'form-control',
+                                                'type' => 'password',
                                                 'id' => 'password',
                                                 'data-toggle' => 'tooltip',
                                                 'value' => "",
                                                 'data-original-title' => 'Password is required')) }}
                                         </div>
                                     </div>
-                                      
+
                                     <div class="col-md-12 overflowed">
                                         <div class="text-center margin-top">
                                             <button class="btn btn-theme btn-theme-xl submit-button" type="submit"> Submit <i class="fa fa-arrow-circle-right"></i></button>
@@ -74,7 +74,7 @@
                             {{ Form::close() }}
 
                             <!--  Form -->
-                            
+
                             <!-- -->
                             <hr class="page-divider line large">
                             <!-- -->
@@ -90,12 +90,12 @@
                                     <div class="col-sm-12 form-alert"></div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-name" data-toggle="tooltip" title="" data-original-title="First name is required" placeholder="First name">
+                                            <input name="first_name" type="text" class="form-control input-name" data-toggle="tooltip" title="" data-original-title="First name is required" placeholder="First name">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-email" data-toggle="tooltip" title="" data-original-title="Last name is required" placeholder="Last name">
+                                            <input name="last_name" type="text" class="form-control input-email" data-toggle="tooltip" title="" data-original-title="Last name is required" placeholder="Last name">
                                         </div>
                                     </div>
                                 </div>
@@ -104,27 +104,27 @@
                                     <div class="col-sm-12 form-alert"></div>
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-name" data-toggle="tooltip" title="" data-original-title="Email is required" placeholder="Email address">
+                                            <input name="email" type="text" class="form-control input-name" data-toggle="tooltip" title="" data-original-title="Email is required" placeholder="Email address">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-email" data-toggle="tooltip" title="" data-original-title="Password is required" placeholder="Password">
+                                            <input name="password" type="password" class="form-control input-email" data-toggle="tooltip" title="" data-original-title="Password is required" placeholder="Password">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-email" data-toggle="tooltip" title="" data-original-title="Password confirmation is required" placeholder="Retype password">
+                                            <input name="password_confirmation" type="password" class="form-control input-email" data-toggle="tooltip" title="" data-original-title="Password confirmation is required" placeholder="Retype password">
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-md-12 overflowed">
                                         <div class="text-center margin-top">
                                             <button class="btn btn-theme btn-theme-xl submit-button" type="submit"> Submit <i class="fa fa-arrow-circle-right"></i></button>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            {{ Form::close() }}
 
 
                         </section>
@@ -132,7 +132,7 @@
 
                         <hr class="page-divider transparent visible-xs">
 
-                        
+
 
                     </div>
                 </section>

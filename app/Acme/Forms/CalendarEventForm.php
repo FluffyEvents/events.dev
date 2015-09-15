@@ -9,7 +9,7 @@ class CalendarEventForm extends FormValidator {
 		'end_time' => 'required|max:255',
 		'title' => 'required|max:255',
 		'description' => 'required|max:4000',
-		'price' => 'decimal|max:99999999',
+		'price' => 'required|numeric',
         'name' => 'required|max:100',
 		'address' => 'required|max:255',
 		'city' => 'required|max:100',

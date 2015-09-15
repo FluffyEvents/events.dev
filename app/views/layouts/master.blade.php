@@ -53,7 +53,7 @@
                 <div class="top-line">
                     <div class="container">
                         <ul class="user-menu">
-                            <li><a href="{{ action('HomeController@showLogin')}}"><i class="fa fa-user"></i> Login / Register Here</a></li>
+                            <li><a href="/login"><i class="fa fa-user"></i> Login / Register Here</a></li>
                         </ul>
                         {{-- <div class="hot-line"><span><i class="fa fa-calendar"></i> <strong>Latest Event:</strong></span>  Standart Event Name Here  "15 October at 20:00 - 22:00 on Manhattan / New York"</div> --}}
                     </div>
@@ -65,7 +65,7 @@
 
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="{{ action('HomeController@showWelcome')}}" class="scroll-to">
+                            <a href="/" class="scroll-to">
                                 <span class="fa-stack">
                                     <i class="fa logo-hex fa-stack-2x"></i>
                                     <i class="fa logo-fa fa-paw fa-stack-1x"></i>
@@ -84,7 +84,7 @@
                                     <a href="{{ action('HomeController@showWelcome')}}" class="sf-with-ul">Home</a>
                                 </li>
                                 <li class="">
-                                    <a href="event-list.html" class="sf-with-ul">Events</a>
+                                    <a href="/events" class="sf-with-ul">Events</a>
                                     <ul style="display: none;">
                                         <li><a href="event-list.html">Event List</a></li>
                                         <li><a href="event-grid.html">Event Grid</a></li>
@@ -175,13 +175,13 @@
                             <div class="col-sm-12 form-alert"></div>
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    
+
                                     <input data-toggle="tooltip" class="form-control input-name" data-original-title="Name is required" id="email" name="email" type="email" value="{{{ Input::old('email') }}}">
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    
+
                                     <input data-toggle="tooltip" class="form-control input-password" data-original-title="Password" id="password" name="password" type="password" value="">
                                 </div>
                             </div>
