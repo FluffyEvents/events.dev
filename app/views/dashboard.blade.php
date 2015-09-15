@@ -1,4 +1,4 @@
-@extends('dev.layout')
+@extends('layouts.master')
 
 @section('style')
 <meta id="token" name="token" value="{{ csrf_token() }}">
@@ -6,6 +6,9 @@
 @stop
 
 @section('content')
+<hr><hr><hr><hr>
+<div class="container-fluid">
+    <div class="col-xs-6 col-xs-offset-3">
 <div id="dashboard">
           <h2> Events Dashboard <h2>
 
@@ -36,6 +39,8 @@
 
 
       </div>
+  </div>
+  </div>
 
 @stop
 @section('scripts')

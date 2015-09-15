@@ -41,7 +41,7 @@ class CalendarEventsController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('dev.makeEvent');
+		return View::make('makeEvent');
 	}
 
 
