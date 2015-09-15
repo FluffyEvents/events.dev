@@ -11,7 +11,8 @@ Spec Layout:
 Spec Packages:
 Packages:
 - Ways Generators
-- Esensi Model
+- ~~Esensi Model~~
+- Laracasts/Validation
 
 
 Spec Models:
