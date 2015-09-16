@@ -1986,6 +1986,13 @@ textarea {
 
 }
 
+#main-slider .slide4 h2 {
+    color: #fff; 
+    font-family: 'Roboto', sans-serif; 
+    font-style: bolder; 
+    font-size: 68px;
+}
+
 #main-slider .slide4 .btn-theme-dark {
     border-color: #0d1d31;
     background-color: #0d1d31;

@@ -31,7 +31,6 @@
         <script src="assets/plugins/iesupport/html5shiv.js"></script>
         <script src="assets/plugins/iesupport/respond.min.js"></script>
         <![endif]-->
-    <meta name="chromesniffer" id="chromesniffer_meta" content="{&quot;Bootstrap&quot;:-1,&quot;jQuery&quot;:&quot;2.1.1&quot;,&quot;Modernizr&quot;:&quot;2.7.1&quot;,&quot;GoogleMapApi&quot;:-1}"><script type="text/javascript" src="chrome-extension://homgcnaoacgigpkkljjjekpignblkeae/detector.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/22/2/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/22/2/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/22/2/stats.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/22/2/map.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/22/2/marker.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/22/2/onion.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/22/2/controls.js"></script>
 </head>
 
 

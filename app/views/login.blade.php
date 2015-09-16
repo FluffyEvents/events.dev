@@ -74,6 +74,8 @@
 
             <!--  Form -->
 
+            <a name="signup"></a>
+
             <!-- -->
             <hr class="page-divider line large">
             <!-- -->
