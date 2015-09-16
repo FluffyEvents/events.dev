@@ -10,11 +10,7 @@
 
     <section class="page-section image breadcrumbs overlay">
         <div class="container">
-            <h1>EVENT DETAIL PAGE</h1>
-            <ul class="breadcrumb">
-                <li><a href="/">Home</a></li>
-                <li><a class="active disabled" href="#">Events</a></li>
-            </ul>
+            <h1 class="section-title">EVENTS</h1>
         </div>
     </section>
 
@@ -23,12 +19,9 @@
     <section class="page-section with-sidebar sidebar-right first-section">
         <div class="container">
 
-            
-
-            <hr class="page-divider transparent visible-xs">
 
             <!-- Content -->
-            <section id="content" class="content col-sm-8 events-listing">
+            <section id="content" class="content col-sm-8">
 
                 <div class="tab-content">
                     <div id="list-view" class="tab-pane fade active in" role="tabpanel">
@@ -39,20 +32,13 @@
                                 <div class="row">
                                     <div class="col-md-3 col-sm-3 col-xs-4">
                                         <div class="media">
-                                            <a href="#" class="like"><i class="fa fa-heart"></i></a>
-                                            <img src="assets/img/preview/event-1.jpg" alt="">
+                                            <img src="assets/img/kitty-1.jpg" alt="">
                                             <div class="caption hovered"></div>
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-sm-9 col-xs-8">
                                         <div class="caption">
-                                            <a href="#" class="pull-right">
-                                                <span class="fa-stack fa-lg">
-                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
-                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
-                                                </span>
-                                            </a>
-                                            <h3 class="caption-title"><a href="#">{{ $event->title }}</a></h3>
+                                            <h2 class="caption-title"><a href="#">{{ $event->title }}</a></h2>
 											<p class="caption-category"><i class="fa fa-file-text-o"></i> {{ $event->start_time }} - {{ $event->end_time }} @ {{ $event->location->city}} // {{ $event->location->state }}</p>
 											<p class="caption-price">Tickets from ${{ $event->price }}</p>
 											<p class="caption-text">{{ $event->description }}</p>
@@ -65,22 +51,9 @@
                             <hr class="page-divider half">
                             @endforeach
 
-                            {{ $events->links() }}
-
-                            
-
-                        <!-- Pagination -->
-                        <div class="pagination-wrapper">
-                            <ul class="pagination">
-                                <li class="disabled"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-                                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                            </ul>
-                        </div>
-                        <!-- /Pagination -->
+                            <div class="pagination-wrapper text-center">
+	                            {{ $events->links() }}
+	                        </div>
                     </div>
                 </div>
             </section>

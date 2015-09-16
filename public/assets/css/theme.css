@@ -205,9 +205,6 @@ body.boxed {
     margin-top: 50px;
 }
 
-.container > .events-listing{
-    margin: 0 auto;
-}
 
 .wide .container.full-width {
     width: 100%;
@@ -2831,18 +2828,23 @@ footer.post-meta .post-categories {display: block;}
 }
 .pagination > li:first-child > a,
 .pagination > li:first-child > span {
-    border-radius: 20px;
+    border-radius: 5px;
     background-color: transparent;
 }
 .pagination > li:last-child > a,
 .pagination > li:last-child > span {
-    border-radius: 20px;
+    border-radius: 5px;
     background-color: transparent;
 }
 .pagination > li > a,
 .pagination > li > span {
-    border: none;
+    background-color: #f5f5f5;
+    color: #253239;
+    border-radius: 5px;
+    margin: 0 10px 0 0;
+    padding: 10px 18px;
 }
+
 .pagination > li > a:hover,
 .pagination > li > span:hover,
 .pagination > li > a:focus,

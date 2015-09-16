@@ -17,7 +17,15 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
-		return View::make('index');
+		$query = CalendarEvent::with('location');
+
+		if (Input::has('q')) {
+		$search = Input::get('q');
+		$query->where('title', 'like', "%$search%");
+		}
+
+		$events = $query->orderBy('start_time', 'asc')->paginate(12);
+		return View::make('index', compact('events'));
 	}
 
 	public function showLogin()
