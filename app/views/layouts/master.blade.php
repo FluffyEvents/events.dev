@@ -81,13 +81,12 @@
 
 
                             @if ( Auth::check() )
-                                <li class=""><a href="logout"><i class="fa fa-sign-out"></i> Logout</a></li>
-								<li><a href="/events/create" class="">Create New Event <i class="fa fa-plus-circle"></i></a></li>
-
                                 <li><a href="/events/manage" class="btn btn-theme btn-submit-event">Manage Your Events</a></li>
+                                <li><a href="/events/create" class="">Create New Event <i class="fa fa-plus-circle"></i></a></li>
+                                <li class=""><a href="{{ action('HomeController@submitLogout')}}">Logout <i class="fa fa-sign-out"></i></a></li>
                             @else
-                                <li class=""><a href="login"><i class="fa fa-user"></i> Login / Register Here</a></li>
-                                <li><a href="/events" class="btn btn-theme btn-submit-event">View All Events <i class="fa fa-plus-circle"></i></a></li>
+                                <li><a href="/events" class="btn btn-theme btn-submit-event">View All Events <i class="fa fa-arrow-circle-right"></i></a></li>
+                                <li class=""><a href="login">Login / Register Now <i class="fa fa-street-view"></i></a></li>
                             @endif
                         </ul>
                     </nav>

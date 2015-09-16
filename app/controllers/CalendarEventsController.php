@@ -22,8 +22,10 @@ class CalendarEventsController extends \BaseController {
 		$query = CalendarEvent::with('location');
 
 		if (Input::has('q')) {
+			
 			$search = Input::get('q');
 			$query->where('title', 'like', "%$search%");
+
 		}
 
 		$events = $query->orderBy('start_time', 'asc')->paginate(4);

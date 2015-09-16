@@ -101,6 +101,7 @@
         <div class="row thumbnails no-padding gallery isotope isotope-items" style="position: relative; overflow: hidden; height: 3032px;">
 
             {{-- wrap repeat around this div --}}
+            @foreach($events as $event)
             <div class="col-md-3 col-sm-6 isotope-item photos" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
                 <div class="thumbnail no-border no-padding">
                     <div class="media">
@@ -118,17 +119,18 @@
                         <div class="caption hovered back">
                             <div class="caption-wrapper div-table">
                                 <div class="caption-inner div-cell">
-                                    <h3 class="caption-title">CAT PARTY</h3>
-                                    <p class="caption-category">in San Antonio</p>
+                                    <h3 class="caption-title">{{ $event->title }}</h3>
+                                    <p class="caption-category">in {{ $event->location->city}}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            @endforeach
             {{-- end repeat around this div --}}
 
-            <div class="col-md-3 col-sm-6 isotope-item videos" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 379px, 0px);">
+            {{-- <div class="col-md-3 col-sm-6 isotope-item videos" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 379px, 0px);">
                 <div class="thumbnail no-border no-padding">
                     <div class="media">
                         <img src="assets/img/preview/latest-2a.jpg" alt="">
@@ -308,7 +310,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
         <div class="text-center margin-top">
@@ -316,11 +318,6 @@
         </div>
 
     </div>
-</section>        
-                
-                
-
-
-
+</section>
 
 @stop
