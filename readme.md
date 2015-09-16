@@ -74,7 +74,7 @@ Users may need to address any or all of the following tasks related to an event 
 1. When adding new models to your Laravel application, if you want to use the Enseni Model validation make sure to include the following in the php file where the model lives.
 2. The rules defined in the model will be used for validation when creating/updating the model.
 
-```
+```php
 <?php
 
 use \Esensi\Model\Model;
