@@ -42,7 +42,7 @@ Spec Resource Controllers:
 - CalendarEventsController
 
 
-# Over-Achiever's TODO
+## Over-Achiever's TODO
 Bonus:
 - Event image(s)
 - Add Longitude/Lattitude to Location
@@ -50,7 +50,7 @@ Bonus:
 - Add functionality for visitors to register for an event
 
 
-#Application User Profiling
+##Application User Profiling
 Users may need to address any or all of the following tasks related to an event outside the current application scope:
 - Conduct event research (Wolfram Alpha)
 - Organize food, decorations and entertainment for an event
@@ -70,6 +70,26 @@ Users may need to address any or all of the following tasks related to an event 
 6. Run php artisan key:generate. This generates a secure cipher key for encrypting your data.
 7. Run php artisan serve. This serves your application to the browser. You can also use Homestead, LAMP, WAMP, etc.
 
+## Setting Up Your Enseni Models
+1. When adding new models to your Laravel application, if you want to use the Enseni Model validation make sure to include the following in the php file where the model lives.
+2. The rules defined in the model will be used for validation when creating/updating the model.
+
+``` models/Article.php 
+
+<?php
+
+use \Esensi\Model\Model;
+
+class Article extends Model {
+
+    protected $rules = array(
+		'title' => 'required|max:255',
+		'body' => 'required|max:4000',
+	);
+
+......
+
+```
 ## Contributing
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
