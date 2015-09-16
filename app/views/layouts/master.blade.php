@@ -122,7 +122,7 @@
                             <li data-animation="flipInY" data-animation-delay="700" class="animated flipInY visible"><a href="#" class="skype"><i class="fa fa-skype"></i></a></li>
                         </ul>
                     </div>
-                    <span class="copyright animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="100">© 2015 im Event — The Event Manager Theme made with passion by jThemes Studio</span>
+                    <span class="copyright animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="100">© 2015 BEERE INDUSTRIES — The Event Manager Theme made with passion by CiaoRachel Studios</span>
                 </div>
             </div>
         </footer>

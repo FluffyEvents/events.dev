@@ -197,4 +197,4 @@ Documentation for Laravel 4.2 can be found on the [http://laravel.com/docs/4.2](
 
 ### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+The Laravel framework and all packages used in the creation of this application are open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)

@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-	
+
 <div id="main">
     <!-- SLIDER -->
     <section class="page-section no-padding background-img-slider">
@@ -25,7 +25,7 @@
                                         <div id="defaultCountdown" class="defaultCountdown clearfix"></div>
                                     </div>
                                     <p class="caption-text">
-                                        <a class="btn btn-theme btn-theme scroll-to" href="#" data-animation="flipInY" data-animation-delay="600">Register</a>
+                                        <a class="btn btn-theme btn-theme scroll-to" href="/comingsoon" data-animation="flipInY" data-animation-delay="600">Register</a>
                                     </p>
                                 </div>
                             </div>
@@ -75,7 +75,7 @@
     <!-- /SLIDER -->
 </div>
 
-   
+
 
 <section class="page-section no-padding-bottom">
     <div class="container">
