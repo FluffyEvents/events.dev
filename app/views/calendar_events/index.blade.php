@@ -19,9 +19,8 @@
     <section class="page-section with-sidebar sidebar-right first-section">
         <div class="container">
 
-
             <!-- Content -->
-            <section id="content" class="content col-sm-8">
+            <section id="content" class="content col-sm-offset-2 col-sm-8">
 
                 <div class="tab-content">
                     <div id="list-view" class="tab-pane fade active in" role="tabpanel">

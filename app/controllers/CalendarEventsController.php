@@ -90,11 +90,10 @@ class CalendarEventsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show(CalendarEvent $calendarEvent)
+	public function show($id)
 	{
-		// $calendarEvent = CalendarEvent::findOrFail($id);
-
-		return View::make('calendar_events.show', compact('calendarEvent'));
+		$event = $id;
+		return View::make('calendar_events.show', compact('event'));
 	}
 
 	/**

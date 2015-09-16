@@ -24,7 +24,7 @@ class HomeController extends BaseController {
 		$query->where('title', 'like', "%$search%");
 		}
 
-		$events = $query->orderBy('start_time', 'asc')->paginate(12);
+		$events = $query->orderBy('start_time', 'asc')->paginate(8);
 		return View::make('index', compact('events'));
 	}
 
