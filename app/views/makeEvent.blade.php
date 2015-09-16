@@ -6,7 +6,7 @@
     <div class="col-xs-6 col-xs-offset-3">
     {{ Form::open(array('action' => 'CalendarEventsController@store',
         'method' => 'POST', 'class' => 'form-horizontal')) }}
-        
+
 
 @include('locations.create')
 <br>
@@ -33,14 +33,22 @@
     };
 
     jQuery('#startsAtDateTimePicker').datetimepicker({
-        format:'YYYY-MM-DD h:mm:ss',
+        format:'YYYY-MM-DD h:mm:00',
         formatTime:'h:mm a',
         formatDate:'DD-MM-YYYY'
     });
     jQuery('#endsAtDateTimePicker').datetimepicker({
-        format:'YYYY-MM-DD h:mm:ss',
+        format:'YYYY-MM-DD h:mm:00',
         formatTime:'h:mm a',
         formatDate:'DD-MM-YYYY'
+    });
+
+    $("select").change(function (){
+        if ($( "select option:selected" ).val() != -1) {
+            $(".new-location").hide();
+        } else {
+            $(".new-location").show();
+        }
     });
 </script>
 @stop

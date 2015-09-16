@@ -70,7 +70,7 @@ Users may need to address any or all of the following tasks related to an event 
 6. Run php artisan key:generate. This generates a secure cipher key for encrypting your data.
 7. Run php artisan serve. This serves your application to the browser. You can also use Homestead, LAMP, WAMP, etc.
 
-## Setting Up Your Enseni Models
+## Setting Up Your Ensensi Models
 1. When adding new models to your Laravel application, if you want to use the Enseni Model validation make sure to include the following in the php file where the model lives.
 2. The rules defined in the model will be used for validation when creating/updating the model.
 
