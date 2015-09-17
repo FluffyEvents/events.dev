@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-	
+
 <div id="main">
     <!-- SLIDER -->
     <section class="page-section no-padding background-img-slider">
@@ -57,7 +57,7 @@
     <!-- /SLIDER -->
 </div>
 
-   
+
 
 <section class="page-section no-padding-bottom">
     <div class="container">

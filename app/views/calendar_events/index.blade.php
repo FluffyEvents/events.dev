@@ -25,6 +25,7 @@
                 <div class="tab-content">
                     <div id="list-view" class="tab-pane fade active in" role="tabpanel">
                         <div class="thumbnails events vertical">
+
                         	@foreach($events as $event)
 
                             <div class="thumbnail no-border no-padding">
@@ -37,6 +38,7 @@
                                     </div>
                                     <div class="col-md-9 col-sm-9 col-xs-8">
                                         <div class="caption">
+
                                             <h2 class="caption-title"><a href="#">{{ $event->title }}</a></h2>
 											<p class="caption-category"><i class="fa fa-file-text-o"></i> {{ $event->start_time }} - {{ $event->end_time }} @ {{ $event->location->city}} // {{ $event->location->state }}</p>
 											<p class="caption-price">Tickets from ${{ $event->price }}</p>
@@ -53,6 +55,7 @@
                             <div class="pagination-wrapper text-center">
 	                            {{ $events->links() }}
 	                        </div>
+
                     </div>
                 </div>
             </section>

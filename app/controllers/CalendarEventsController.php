@@ -22,12 +22,15 @@ class CalendarEventsController extends \BaseController {
 		$query = CalendarEvent::with('location');
 
 		if (Input::has('q')) {
-		$search = Input::get('q');
-		$query->where('title', 'like', "%$search%");
+
+			$search = Input::get('q');
+			$query->where('title', 'like', "%$search%");
+
 		}
 
 		$events = $query->orderBy('start_time', 'asc')->paginate(4);
 		return View::make('calendar_events.index', compact('events'));
+
 	}
 
 	/**
@@ -47,7 +50,10 @@ class CalendarEventsController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('makeEvent');
+		$locations = ['-1' => 'none'] + Location::lists('name', 'id');
+		// $locations = Location::lists('name', 'id');
+		// $locations = array_add($locations, '-1', '');
+		return View::make('makeEvent', compact('locations'));
 	}
 
 
@@ -58,24 +64,35 @@ class CalendarEventsController extends \BaseController {
 	 */
 	public function store()
 	{
-		// Grab the Input data for the Location
+		// Grab the Input data for the everything
 		$input = Input::only('name', 'address', 'city', 'state', 'postal_code',
 		'start_time', 'end_time', 'title', 'description', 'price');
 
 		//validate:form exceptions handled in start/global.php
 		$this->calendarEventForm->validate($input);
 
-		$location = Location::create($input);
+		if (Input::get('location') == -1) {
 
-		$calendarEvent = CalendarEvent::create(array(
-			'start_time' => Input::get('start_time'),
-			'end_time' => Input::get('end_time'),
-			'title' => Input::get('title'),
-			'description' => Input::get('description'),
-			'price' => Input::get('price'),
-			'location_id' => $location->id,
-			'user_id' => Auth::id()
-		));
+			$location = Location::create($input);
+
+			$locationId = $location->id;
+
+		} else {
+
+			$locationId = Input::get('location');
+		}
+
+			$calendarEvent = CalendarEvent::create(array(
+				'start_time' => Input::get('start_time'),
+				'end_time' => Input::get('end_time'),
+				'title' => Input::get('title'),
+				'description' => Input::get('description'),
+				'price' => Input::get('price'),
+				'location_id' => $locationId,
+				'user_id' => Auth::id()
+			));
+
+
 
 
 		return Response::json(CalendarEvent::with('user', 'location')->where('user_id', Auth::id())->get());

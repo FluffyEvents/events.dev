@@ -14,6 +14,9 @@
 #Home
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@showWelcome']);
 
+#Coming Soon
+Route::get('/comingsoon', 'HomeController@showComingSoon');
+
 #Manage Events Dashboard
 Route::get('/getlists', 'CalendarEventsController@currentUserEvents');
 Route::get('/events/manage', 'HomeController@showManageDashboard');

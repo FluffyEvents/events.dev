@@ -10,11 +10,12 @@ class CalendarEventForm extends FormValidator {
 		'title' => 'required|max:255',
 		'description' => 'required|max:4000',
 		'price' => 'required|numeric',
-        'name' => 'required|max:100',
-		'address' => 'required|max:255',
-		'city' => 'required|max:100',
-		'state' => 'required|max:30',
-		'postal_code' => 'required|max:5'
+        'name' => 'max:100',
+		'address' => 'max:255',
+		'city' => 'max:100',
+		'state' => 'max:30',
+		'postal_code' => 'max:5',
+        'location' => 'integer'
 	);
 
 }

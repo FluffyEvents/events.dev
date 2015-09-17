@@ -70,4 +70,8 @@ class HomeController extends BaseController {
 		return Redirect::to('/');
 	}
 
+	public function showComingSoon()
+	{
+		return View::make('comingsoon');
+	}
 }
