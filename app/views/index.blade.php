@@ -24,7 +24,7 @@
                                         <div id="defaultCountdown" class="defaultCountdown clearfix"></div>
                                     </div>
                                     <p class="caption-text">
-                                        <a class="btn btn-theme btn-theme scroll-to" href="#" data-animation="flipInY" data-animation-delay="600">Register</a>
+                                        <a class="btn btn-theme scroll-to" href="#" data-animation="flipInY" data-animation-delay="600">Register</a>
                                     </p>
                                 </div>
                             </div>
@@ -91,8 +91,8 @@
                         <div class="caption hovered">
                             <div class="caption-wrapper div-table">
                                 <div class="caption-inner div-cell">
-                                    <p class="caption-buttons">
-                                        <a href="#" class="btn caption-link"><i class="fa fa-plus"></i></a>
+                                    <p class="caption-text">
+                                        <a href="/events/{{ $event->id }}" class="btn btn-theme scroll-to">Details <i class="fa fa-plus"></i></a>
                                     </p>
                                 </div>
                             </div>

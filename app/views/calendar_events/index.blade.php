@@ -31,7 +31,7 @@
                                 <div class="row">
                                     <div class="col-md-3 col-sm-3 col-xs-4">
                                         <div class="media">
-                                            <img src="assets/img/kitty-1.jpg" alt="">
+                                            <img src="/assets/img/kitty-1.jpg" alt="">
                                             <div class="caption hovered"></div>
                                         </div>
                                     </div>
@@ -41,7 +41,7 @@
 											<p class="caption-category"><i class="fa fa-file-text-o"></i> {{ $event->start_time }} - {{ $event->end_time }} @ {{ $event->location->city}} // {{ $event->location->state }}</p>
 											<p class="caption-price">Tickets from ${{ $event->price }}</p>
 											<p class="caption-text">{{ $event->description }}</p>
-											<p class="caption-more"><a href="#" class="btn btn-theme">Tickets &amp; details</a></p>
+											<p class="caption-more"><a href="/events/{{ $event->id }}" class="btn btn-theme">Tickets &amp; details</a></p>
                                         </div>
                                     </div>
                                 </div>

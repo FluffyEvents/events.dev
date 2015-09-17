@@ -28,11 +28,21 @@
                 </h1>
                 <h4 class="section-title">Start Time: <small>{{ $event->start_time }}</small></h3>
                 <h4 class="section-title">End Time: <small>{{ $event->end_time }}</small></h3>
-                <h4 class="section-title">Where: <small>{{ $event->location->city}}, {{ $event->location->state }}</small></h3>
+                <h4 class="section-title">Where: <small>{{ $event->location->name}}, {{ $event->location->address}}, {{ $event->location->city}}, {{ $event->location->state }} {{ $event->location->postal_code}}</small></h3>
                 <h4 class="section-title">Description: <small>{{ $event->description }}</small></h3> 
                 <p class="btn-row">
-                    <a href="#" class="btn btn-theme btn-theme-xl scroll-to">RSVP <i class="fa fa-arrow-circle-right"></i></a>
-                    <a href="#" class="btn btn-theme btn-theme-xl btn-theme-transparent">Contact Organizer</a>
+	                <div class="col-sm-6 col-md-4"> 
+	                    <div class="form-group selectpicker-wrapper">
+	                        <select class="selectpicker input-price" data-width="100%" data-toggle="tooltip" title="Select Your Price Tab" style="display: none;">
+	                            <option>RSVP</option>
+	                            <option>$2 due now</option>
+	                            <option>$2 due at will call</option>
+	                        </select>
+	                    </div>
+	                </div>
+	                <div class="col-sm-6 col-md-4">
+                    	<a href="#" class="btn btn-theme btn-theme-lg btn-theme-transparent">Contact Organizer <i class="fa fa-bullhorn"></i></a>
+                    </div>
                 </p>
 
                 <!-- -->
