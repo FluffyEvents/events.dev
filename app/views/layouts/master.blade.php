@@ -71,10 +71,10 @@
                         <ul class="sf-menu nav sf-js-enabled sf-arrows">
 
                             <li class="header-search-wrapper">
-                                <form action="#" class="header-search-form">
-                                    <input type="text" class="form-control header-search" placeholder="Search Fluffy">
+								{{ Form::open(array('action' => 'CalendarEventsController@index', 'method' => 'GET', 'class' => 'header-search-form')) }}
+                                    <input type="text" name="q" class="form-control header-search" placeholder="Search Fluffy">
                                     <input type="submit" hidden="hidden">
-                                </form>
+                                {{ Form::close() }}
                             </li>
                             <li><a href="#" class="btn-search-toggle"><i class="fa fa-search"></i></a></li>
 
@@ -85,7 +85,7 @@
                                 <li class=""><a href="{{ action('HomeController@submitLogout')}}">Logout <i class="fa fa-sign-out"></i></a></li>
                             @else
                                 <li><a href="/events" class="btn btn-theme btn-submit-event">View All Events <i class="fa fa-arrow-circle-right"></i></a></li>
-                                <li class=""><a href="login">Login / Register Now <i class="fa fa-street-view"></i></a></li>
+                                <li class=""><a href="/login">Login / Register Now <i class="fa fa-street-view"></i></a></li>
                             @endif
                         </ul>
                     </nav>
