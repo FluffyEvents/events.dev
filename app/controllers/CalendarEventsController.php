@@ -14,7 +14,7 @@ class CalendarEventsController extends \BaseController {
 
 		 $this->calendarEventForm = $calendarEventForm;
 
- 		 $this->beforeFilter('auth', array('except' => array('index', 'show')));
+ 		 $this->beforeFilter('auth', array('except' => array('index', 'show', 'getAddress')));
 
  	 }
 	public function index()
@@ -107,9 +107,8 @@ class CalendarEventsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show(CalendarEvent $event)
 	{
-		$event = $id;
 		return View::make('calendar_events.show', compact('event'));
 	}
 
@@ -148,6 +147,10 @@ class CalendarEventsController extends \BaseController {
 		return Redirect::route('calendarevents.index');
 	}
 
+	public function getAddress(CalendarEvent $event) {
+		$location = Location::findOrFail($event->location_id);
+		return Response::json($location);
+	}
 	/**
 	 * Remove the specified CalendarEvent from storage.
 	 *

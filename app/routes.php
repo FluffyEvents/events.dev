@@ -25,6 +25,8 @@ Route::get('/events/manage', 'HomeController@showManageDashboard');
 Route::model('events', 'CalendarEvent');
 Route::resource('events', 'CalendarEventsController');
 
+Route::get('getAddress/{events}', 'CalendarEventsController@getAddress');
+
 
 # Authentication
 Route::get('login', ['as' => 'login', 'uses' => 'HomeController@showLogin']);

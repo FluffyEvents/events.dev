@@ -45,9 +45,9 @@
 
     $("select").change(function (){
         if ($( "select option:selected" ).val() != -1) {
-            $(".new-location").hide();
+            $(".new-location").slideUp(500);
         } else {
-            $(".new-location").show();
+            $(".new-location").slideDown(500);
         }
     });
 </script>
