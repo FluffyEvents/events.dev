@@ -93,3 +93,11 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+/*
+|-------------------------------------
+| Require Route Bindings File
+|-------------------------------------
+*/
+
+require app_path().'/bindings.php';
