@@ -35,8 +35,8 @@
                 </h1>
                 <h4 class="section-title">Start Time: <small>{{ $event->start_time }}</small></h3>
                 <h4 class="section-title">End Time: <small>{{ $event->end_time }}</small></h3>
-                <h4 class="section-title">Where: <small>{{ $event->location->name}}, {{ $event->location->address}}, {{ $event->location->city}}, {{ $event->location->state }} {{ $event->location->postal_code}}</small></h3>
-                <h4 class="section-title">Description: <small>{{ $event->description }}</small></h3> 
+                <h4 class="section-title">Where: <small>{{ $event->location->name}} - {{ $event->location->address}}, {{ $event->location->city}}, {{ $event->location->state }} {{ $event->location->postal_code}}</small></h3>
+                <h4 class="section-title">Description: <small>{{ $event->description }}</small></h3>
                 <p class="btn-row">
 	                <div class="col-sm-6 col-md-4">
 	                    <div class="form-group selectpicker-wrapper">
@@ -104,14 +104,19 @@
         // Render the map
         var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
+
         // Set our address to geocode
-        var eventId = document.querySelector('#event-id').getAttribute('value');
+        var eventId = document.getElementById('event-id').getAttribute('value');
 
         var address = "";
         $.get("/getAddress/"+eventId).done(function(data) {
             console.log("Everything went great!");
             console.log(data.address + ", " + data.city + ", " + data.state + ", " + data.postal_code);
             var address = data.address + ", " + data.city + ", " + data.state + ", " + data.postal_code;
+
+            var contentString = '<div id="content">'+
+                '<h2 id="firstHeading" class="firstHeading">'+ data.name +'</h2>'+
+                '<div id="bodyContent">'+'<p>'+ address +'</p>'+'</div>'+'</div>';
 
 
             // Init geocoder object
@@ -129,6 +134,15 @@
                         map: map,
                         position: results[0].geometry.location
                     });
+
+                    var infowindow = new google.maps.InfoWindow({
+                        content: contentString
+                    });
+                    marker.addListener('click', function() {
+                        infowindow.open(map, marker);
+                      });
+
+                    infowindow.open(map, marker);
                } else {
 
                    // Show an error message with the status if our request fails
