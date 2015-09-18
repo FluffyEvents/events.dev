@@ -21,7 +21,6 @@
 
             <!-- Content -->
             <section id="content" class="content col-sm-offset-2 col-sm-8">
-
                 <div class="tab-content">
                     <div id="list-view" class="tab-pane fade active in" role="tabpanel">
                         <div class="thumbnails events vertical">
@@ -55,9 +54,9 @@
                             <div class="pagination-wrapper text-center">
 	                            {{ $events->links() }}
 	                        </div>
-
-                    </div>
-                </div>
+                    	</div>
+                	</div>
+            	</div>
             </section>
             <!-- /Content -->
 

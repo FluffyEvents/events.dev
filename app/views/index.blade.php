@@ -60,7 +60,10 @@
 
 <section class="page-section no-padding-bottom">
     <div class="container">
-        <h1>Fluffy Events is the site for finding parties and get-togethers for our furry friends.<small> View <a href="/events">all event listings</a> as well as create your own by <a href="/login#signup">signing up</a> with Fluffy Events.</small></h1>
+        <h1>Fluffy Events is <em>the</em> place for sniffing out social events for our furry friends.</h1>
+
+        <p>Plan out Rover's birthday party or arrange a get-together for Spot.</p> 
+        <p>View <a href="/events">all event listings</a> as well as create your own by <a href="/login#signup">signing up</a> with Fluffy Events!</p>
     </div>
 </section>
 
