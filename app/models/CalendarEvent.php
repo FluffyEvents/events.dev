@@ -20,7 +20,8 @@ class CalendarEvent extends \Eloquent {
 	    'description',
 	    'price',
 	    'location_id',
-	    'user_id'
+	    'user_id',
+		'featured_event'
 	);
 
 	public function getDates()

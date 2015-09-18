@@ -18,13 +18,13 @@
                         <div class="container">
                             <div class="div-table">
                                 <div class="div-cell">
-                                    <h2 data-animation="fadeInDown" data-animation-delay="100"><span>15 October at 20:00 - 22:00</span></h2>
-                                    <h3 class="caption-subtitle" data-animation="fadeInUp" data-animation-delay="300">Fluffy-Con in San Antonio</h3>
+                                    <h3 class="caption-subtitle" data-animation="fadeInUp" data-animation-delay="300">{{ $featuredEvent->title }} in {{ $featuredEvent->location->city }}</h3>
+                                    <h2 data-animation="fadeInDown" data-animation-delay="100"><span> {{ $featuredEvent->start_time->format('F jS h:i a') }} - {{ $featuredEvent->end_time->format('F jS h:i a') }}</span></h2>
                                     <div class="countdown-wrapper">
                                         <div id="defaultCountdown" class="defaultCountdown clearfix"></div>
                                     </div>
                                     <p class="caption-text">
-                                        <a class="btn btn-theme scroll-to" href="#" data-animation="flipInY" data-animation-delay="600">Register</a>
+                                        <a class="btn btn-theme scroll-to" href="/events/{{ $featuredEvent->id }}" data-animation="flipInY" data-animation-delay="600">Register</a>
                                     </p>
                                 </div>
                             </div>

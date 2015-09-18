@@ -29,6 +29,7 @@ class CalendarEventsController extends \BaseController {
 		}
 
 		$events = $query->orderBy('start_time', 'asc')->paginate(4);
+
 		return View::make('calendar_events.index', compact('events'));
 
 	}

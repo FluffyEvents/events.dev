@@ -25,7 +25,9 @@ class HomeController extends BaseController {
 		}
 
 		$events = $query->orderBy('start_time', 'asc')->paginate(8);
-		return View::make('index', compact('events'));
+		$featuredEvent = CalendarEvent::with('location')->where('featured_event', 'like', 'Landing')->first();
+
+		return View::make('index', compact('events', 'featuredEvent'));
 	}
 
 	public function showLogin()
