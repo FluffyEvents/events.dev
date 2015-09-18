@@ -3,12 +3,7 @@
 @section('title')
 <meta id="event-id" name="id" value="{{ $event->id }}">
 <title>Event Details</title>
-<style type="text/css">
-    #map-canvas {
-        width: 285px;
-        height: 400px;
-    }
-</style>
+
 @stop
 
 @section('content')
@@ -61,13 +56,15 @@
 
 			<!-- ASIDE -->
 
-			    <aside class="sidebar col-sm-12 col-md-4">
+			    <aside id="sidebar" class="sidebar col-sm-12 col-md-4">
 			    	<div class="widget google-map-widget">
 				        <!-- Google map -->
-				        <div id="map-canvas">
+				        <div class="google-map">
+				        	<div id="map-canvas">
 
-
+				        	</div>
 				        </div>
+				        
 				        <!-- /Google map -->
 				        
 					</div>

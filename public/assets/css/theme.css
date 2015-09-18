@@ -4575,8 +4575,9 @@ div.pp_overlay {
 }
 .google-map-widget .google-map,
 .google-map-widget #map-canvas {
-    min-height: 200px;
-    max-height: 400px;
+    width: 100%;
+    min-height: 400px;
+    max-height: 500px;
     border-radius: 4px 4px 0 0;
 }
 .google-map-widget .link {
