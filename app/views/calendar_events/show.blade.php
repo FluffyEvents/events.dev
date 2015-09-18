@@ -49,7 +49,7 @@
                 <!-- -->
                 <hr class="page-divider transparent">
                 <!-- -->
-                
+
 
 			</section>
 			<!-- /Content -->
@@ -64,15 +64,15 @@
 
 				        	</div>
 				        </div>
-				        
+
 				        <!-- /Google map -->
-				        
+
 					</div>
 
 
 				</aside>
 
-				    
+
 
 	    <!--/ASIDE -->
 
@@ -108,11 +108,11 @@
         var address = "";
         $.get("/getAddress/"+eventId).done(function(data) {
             console.log("Everything went great!");
-            console.log(data.address + ", " + data.city + ", " + data.state + ", " + data.postal_code);
-            var address = data.address + ", " + data.city + ", " + data.state + ", " + data.postal_code;
+            // console.log(data.address.trim() + ", " + data.city.trim() + ", " + data.state.trim() + ", " + data.postal_code.trim());
+            var address = data.address.trim() + ", " + data.city.trim() + ", " + data.state.trim() + ", " + data.postal_code.trim();
 
             var contentString = '<div id="content">'+
-                '<h2 id="firstHeading" class="firstHeading">'+ data.name +'</h2>'+
+                '<h5 id="firstHeading" class="firstHeading">'+ data.name.trim() +'</h5>'+
                 '<div id="bodyContent">'+'<p>'+ address +'</p>'+'</div>'+'</div>';
 
 
