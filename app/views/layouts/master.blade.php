@@ -248,7 +248,6 @@
             theme.initTestimonials();
             theme.initCorouselSlider4();
             theme.initCorouselSlider3();
-            theme.initGoogleMap();
         });
         jQuery(window).load(function () {
             theme.initAnimation();

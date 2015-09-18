@@ -2,6 +2,8 @@
 
 @section('title')
 <title>Welcome to Fluffy Events</title>
+<meta id="featured-countdown" name="countdown" value="{{ $featuredEvent->start_time->format('m-d-y G:i') }}">
+
 @stop
 
 @section('content')
@@ -120,3 +122,15 @@
 </section>
 
 @stop
+
+@section('scripts')
+{{-- <script src="moment.min.js"></script>
+<script src="countdown.min.js"></script>
+<script src="moment-countdown.min.js"></script> --}}
+<script>
+//LOL THIS ACTUALLY ISNT WORKING - TAKE A LOOK AT THEME.js for the  initcountdown function
+// var featuredCountdown = document.getElementById('featured-countdown').getAttribute('value');
+// $('#defaultCountdown').moment(featuredCountdown).countdown().toString();
+// $('#defaultCountdown2').moment(featuredCountdown).countdown().toString();
+</script>
+@endsection

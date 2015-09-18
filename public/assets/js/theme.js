@@ -290,7 +290,9 @@ var theme = function () {
         // CountDown
         initCountDown: function () {
             var austDay = new Date();
-            austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);
+            var featuredCountdown = document.getElementById('featured-countdown').getAttribute('value');
+
+            austDay = new Date(featuredCountdown);
             $('#defaultCountdown').countdown({until: austDay});
             $('#defaultCountdown2').countdown({until: austDay});
         },
