@@ -33,6 +33,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- /Slide -->
 
 
                 <!-- Slide -->
@@ -51,7 +52,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- /Slide -->
             </div>
 
         </div>
@@ -59,6 +60,11 @@
     <!-- /SLIDER -->
 </div>
 
+<section class="page-section no-padding-bottom">
+    <div class="container">
+        <h1>Fluffy Events is the site for finding parties and get-togethers for our furry friends.<small> View <a href="/events">all event listings</a> as well as create your own by <a href="/login#signup">signing up</a> with Fluffy Events.</small></h1>
+    </div>
+</section>
 
 
 <section class="page-section no-padding-bottom">

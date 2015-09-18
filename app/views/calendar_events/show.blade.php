@@ -3,12 +3,7 @@
 @section('title')
 <meta id="event-id" name="id" value="{{ $event->id }}">
 <title>Event Details</title>
-<style type="text/css">
-    #map-canvas {
-        width: 700px;
-        height: 411px;
-    }
-</style>
+
 @stop
 
 @section('content')
@@ -26,8 +21,8 @@
     <section class="page-section with-sidebar sidebar-right first-section">
         <div class="container">
 
-            <!-- Content -->
-            <section id="content" class="content col-sm-12 col-md-8 col-lg-9">
+        	<!-- Content -->
+            <section id="content" class="content col-sm-12 col-md-7">
 
                 <h1 class="section-title">
                     <span class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-star fa-stack-1x"></i></span></span>
@@ -54,10 +49,32 @@
                 <!-- -->
                 <hr class="page-divider transparent">
                 <!-- -->
-                <div id="map-canvas"></div>
+                
 
 			</section>
-				 <!-- /Content -->
+			<!-- /Content -->
+
+			<!-- ASIDE -->
+
+			    <aside id="sidebar" class="sidebar col-sm-12 col-md-4">
+			    	<div class="widget google-map-widget">
+				        <!-- Google map -->
+				        <div class="google-map">
+				        	<div id="map-canvas">
+
+				        	</div>
+				        </div>
+				        
+				        <!-- /Google map -->
+				        
+					</div>
+
+
+				</aside>
+
+				    
+
+	    <!--/ASIDE -->
 
         </div>
     </section>
