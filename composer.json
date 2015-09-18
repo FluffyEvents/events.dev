@@ -45,6 +45,7 @@
 	"require-dev": {
 		"way/generators": "~2.0",
 		"fzaninotto/faker": "1.5.*@dev",
-		"barryvdh/laravel-debugbar" : "1.8.*"
+		"barryvdh/laravel-debugbar" : "1.8.*",
+		"phpspec/phpspec": "~2.1"
 	}
 }

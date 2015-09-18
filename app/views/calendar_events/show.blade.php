@@ -42,8 +42,8 @@
 	                    <div class="form-group selectpicker-wrapper">
 	                        <select class="selectpicker input-price" data-width="100%" data-toggle="tooltip" title="Select Your Price Tab" style="display: none;">
 	                            <option>RSVP</option>
-	                            <option>$2 due now</option>
-	                            <option>$2 due at will call</option>
+	                            <option>$2 Now</option>
+	                            <option>$2 At Will Call</option>
 	                        </select>
 	                    </div>
 	                </div>

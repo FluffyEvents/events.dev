@@ -24,7 +24,7 @@
                                         <div id="defaultCountdown" class="defaultCountdown clearfix"></div>
                                     </div>
                                     <p class="caption-text">
-                                        <a class="btn btn-theme scroll-to" href="#" data-animation="flipInY" data-animation-delay="600">Register</a>
+                                        <a class="btn btn-theme scroll-to" href="/events/{{ $featuredEvent->id }}" data-animation="flipInY" data-animation-delay="600">Register</a>
                                     </p>
                                 </div>
                             </div>
